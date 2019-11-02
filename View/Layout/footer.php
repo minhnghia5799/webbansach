@@ -19,10 +19,10 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Điều hướng </h2>
                         <ul>
-                        <li class="<?php if(!isset($_GET['page']) || $_GET['page']=='home') echo 'active' ?>"><a href="?page=home">Trang chủ</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='shop')echo 'active' ?>"><a href="?page=shop" >Cửa hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='cart')echo 'active' ?>"><a href="?page=cart">Giỏ hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact')echo 'active' ?>"><a href="?page=contact">Liên hệ</a></li>
+                        <li class="<?php if(!isset($_GET['page']))if($_GET['page']=='home') echo 'active' ?>"><a href="?page=home">Trang chủ</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='shop') echo 'active' ?>"><a href="?page=shop" >Cửa hàng</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='cart') echo 'active' ?>"><a href="?page=cart">Giỏ hàng</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact') echo 'active' ?>"><a href="?page=contact">Liên hệ</a></li>
                         </ul>                        
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <h2 class="footer-wid-title">Tin tức mới</h2>
                         <p>Đăng ký nhận những tin tức của chúng tôi và nhận các ưu đãi độc quyền mà bạn sẽ không tìm thấy bất cứ nơi nào khác!</p>
                         <div class="newsletter-form">
-                            <form action="#">
+                            <form action="">
                                 <input type="email" placeholder="Nhập email của bạn">
                                 <input type="submit" value="Đăng ký">
                             </form>
