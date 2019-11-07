@@ -77,25 +77,25 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo1">
                         <i class="fa fa-refresh"></i>
-                        <p>30 Days return</p>
+                        <p>Đổi trả trong ngày</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo2">
                         <i class="fa fa-truck"></i>
-                        <p>Free shipping</p>
+                        <p>Giao hàng miễn phí</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo3">
                         <i class="fa fa-lock"></i>
-                        <p>Secure payments</p>
+                        <p>Thanh toán an toàn</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="single-promo promo4">
                         <i class="fa fa-gift"></i>
-                        <p>New products</p>
+                        <p>Có nhiều quà tặng</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Sách mới nhất</h2>
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
@@ -188,8 +188,8 @@
                                 <div class="product-f-image">
                                     <img src="View/Resource/img/product-6.jpg" alt="">
                                     <div class="product-hover">
-                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Mua hàng</a>
+                                        <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>
                                 
