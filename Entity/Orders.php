@@ -1,3 +1,4 @@
+<?php
 class Orders
 {
     private $id;
@@ -53,3 +54,4 @@ class Orders
     $this->status = $Status;
     }
 }
+?>

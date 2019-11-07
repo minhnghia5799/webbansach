@@ -1,3 +1,4 @@
+<?php
 class OrderContent
 {
     private $orderId;
@@ -43,3 +44,4 @@ class OrderContent
 
 
 }
+?>

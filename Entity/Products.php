@@ -1,3 +1,4 @@
+<?php
 class Products
 {
     private $id;
@@ -79,3 +80,4 @@ class Products
 
 
 }
+?>
