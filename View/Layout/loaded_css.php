@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- logo and title -->
-    <link rel="icon" type="image/png" href="View/Resource/img/logo.png">
+    <link rel="icon" type="image/png" href="View/Resource/img/logotab.png">
     <title>Libro</title>
     
     <!-- Google Fonts -->
