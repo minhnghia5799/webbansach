@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `orders` (
   `id` bigint(10) NOT NULL,
-  `user_id` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total_price` int(11) NOT NULL,
-  `success_state` bit(1) NOT NULL
+  `userId` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `totalPrice` int(11) NOT NULL,
+  `status` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -41,9 +41,9 @@ CREATE TABLE `orders` (
 -- Cấu trúc bảng cho bảng `order_content`
 --
 
-CREATE TABLE `order_content` (
-  `order_id` bigint(10) NOT NULL,
-  `product_id` bigint(10) NOT NULL,
+CREATE TABLE `ordercontent` (
+  `orderId` bigint(10) NOT NULL,
+  `productId` bigint(10) NOT NULL,
   `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -59,17 +59,16 @@ CREATE TABLE `products` (
   `category` bigint(10) NOT NULL,
   `price` int(11) NOT NULL,
   `sale` float NOT NULL,
-  `image_link` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sell_state` bit(1) NOT NULL
+  `imageLink` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_categories`
+-- Cấu trúc bảng cho bảng `productcategories`
 --
 
-CREATE TABLE `product_categories` (
+CREATE TABLE `productcategories` (
   `id` bigint(10) NOT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -77,17 +76,17 @@ CREATE TABLE `product_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `shipping_info`
+-- Cấu trúc bảng cho bảng `shippinginfo`
 --
 
-CREATE TABLE `shipping_info` (
-  `order_id` bigint(10) NOT NULL,
+CREATE TABLE `shippinginfo` (
+  `orderId` bigint(10) NOT NULL,
   `firstname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `country` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `county` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `province` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `street_address` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `streetAddress` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `postcode` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tel` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `notes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
@@ -101,15 +100,15 @@ CREATE TABLE `shipping_info` (
 
 CREATE TABLE `users` (
   `id` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `firstname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `county` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `province` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `street_address` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone_number` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+  `streetAddress` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phoneNumber` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -121,14 +120,14 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `orders_fk0` (`user_id`);
+  ADD KEY `orders_fk0` (`userId`);
 
 --
 -- Chỉ mục cho bảng `order_content`
 --
-ALTER TABLE `order_content`
-  ADD PRIMARY KEY (`order_id`,`product_id`),
-  ADD KEY `order_content_fk1` (`product_id`);
+ALTER TABLE `ordercontent`
+  ADD PRIMARY KEY (`orderId`,`productId`),
+  ADD KEY `order_content_fk1` (`productId`);
 
 --
 -- Chỉ mục cho bảng `products`
@@ -139,17 +138,17 @@ ALTER TABLE `products`
   ADD KEY `products_fk0` (`category`);
 
 --
--- Chỉ mục cho bảng `product_categories`
+-- Chỉ mục cho bảng `productcategories`
 --
-ALTER TABLE `product_categories`
+ALTER TABLE `productcategories`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Chỉ mục cho bảng `shipping_info`
+-- Chỉ mục cho bảng `shippinginfo`
 --
-ALTER TABLE `shipping_info`
-  ADD PRIMARY KEY (`order_id`);
+ALTER TABLE `shippinginfo`
+  ADD PRIMARY KEY (`orderId`);
 
 --
 -- Chỉ mục cho bảng `users`
@@ -178,7 +177,7 @@ ALTER TABLE `products`
 --
 -- AUTO_INCREMENT cho bảng `product_categories`
 --
-ALTER TABLE `product_categories`
+ALTER TABLE `productcategories`
   MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT;
 
 --
@@ -189,29 +188,29 @@ ALTER TABLE `product_categories`
 -- Các ràng buộc cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_fk0` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `orders_fk0` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
 
 --
 -- Các ràng buộc cho bảng `order_content`
 --
-ALTER TABLE `order_content`
-  ADD CONSTRAINT `order_content_fk0` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
-  ADD CONSTRAINT `order_content_fk1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+ALTER TABLE `ordercontent`
+  ADD CONSTRAINT `order_content_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `order_content_fk1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`);
 
 --
 -- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_fk0` FOREIGN KEY (`category`) REFERENCES `product_categories` (`id`);
+  ADD CONSTRAINT `products_fk0` FOREIGN KEY (`category`) REFERENCES `productcategories` (`id`);
 
 --
 -- Các ràng buộc cho bảng `shipping_info`
 --
-ALTER TABLE `shipping_info`
-  ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+ALTER TABLE `shippinginfo`
+  ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`);
 COMMIT;
 
-insert into product_categories
+insert into productcategories
 values 
 (1,'Chính trị-Pháp luật'),
 (2,'Kiến thức tổng hợp'),
