@@ -213,14 +213,14 @@
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
-                            <img src="View/Resource/img/brand1.png" alt="">
-                            <img src="View/Resource/img/brand2.png" alt="">
-                            <img src="View/Resource/img/brand3.png" alt="">
-                            <img src="View/Resource/img/brand4.png" alt="">
-                            <img src="View/Resource/img/brand5.png" alt="">
-                            <img src="View/Resource/img/brand6.png" alt="">
-                            <img src="View/Resource/img/brand1.png" alt="">
-                            <img src="View/Resource/img/brand2.png" alt="">                            
+                            <img src="View/Resource/img_brand/no1.png" alt="">
+                            <img src="View/Resource/img_brand/no2.png" alt="">
+                            <img src="View/Resource/img_brand/no3.png" alt="">
+                            <img src="View/Resource/img_brand/no4.png" alt="">
+                            <img src="View/Resource/img_brand/no5.png" alt="">
+                            <img src="View/Resource/img_brand/no6.png" alt="">
+                            <img src="View/Resource/img_brand/no1.png" alt="">
+                            <img src="View/Resource/img_brand/no2.png" alt="">                            
                         </div>
                     </div>
                 </div>
