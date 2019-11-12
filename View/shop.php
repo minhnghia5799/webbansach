@@ -23,20 +23,37 @@
     <?php
         require_once SITE_ROOT."/View/Layout/navbar.php";
     ?>
-    <b >Loại sách</b>   
- <select style="text-align:center" name=”loaisach” type="drop-down" >
-   <option >Tất cả</option>
-   <option >Sách giáo khoa</option>
-   <option >Sách khoa học</option>
-   <option >Sách kinh doanh</option>
-   <option >Sách chính trị</option>
-   <option >Sách văn học</option>
-   <option >Truyện ngôn tình</option>
-   <option >Truyện thiếu nhi</option>
-   <option >Truyện tranh</option>
-   <option >Truyện ngôn tình</option>
-   <option >Truyện trinh thám</option>
-   <option >Tiểu thuyết</option>
+   
+
+</select>
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Shop</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+        <b>Loại sách</b>
+        <select style="text-align:center" name=”loaisach” type="drop-down">
+        <option >Tất cả</option>
+        <option >Sách giáo khoa</option>
+        <option >Sách khoa học</option>
+        <option >Sách kinh doanh</option>
+        <option >Sách chính trị</option>
+        <option >Sách văn học</option>
+        <option >Truyện ngôn tình</option>
+        <option >Truyện thiếu nhi</option>
+        <option >Truyện tranh</option>
+        <option >Truyện ngôn tình</option>
+        <option >Truyện trinh thám</option>
+        <option >Tiểu thuyết</option>
+        </div>
 
    <div class="box">
   <div class="container-1">
@@ -46,20 +63,6 @@
 </div>
 <button>Tìm kiếm </button>
 
-</select>
-    <div class="product-big-title-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-bit-title text-center">
-                        <h2>Cửa hàng</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -69,9 +72,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-2.jpg" alt="">
                         </div>
-                        <h2><a href="">Chúng Tớ Lạc vào Cuốn Sách Khác</a></h2>
+                        <h2><a href="">Siêu Thỏ</a></h2>
                         <div class="product-carousel-price">
-                            <ins>45.000</ins> <del>56.000</del>
+                            <ins>29.000</ins> <del>42.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -84,9 +87,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-1.jpg" alt="">
                         </div>
-                        <h2><a href=""> </a></h2>
+                        <h2><a href=""> Bí Ẩn Làng Ma Sói </a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>110.000</ins> <del>150.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -99,9 +102,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-3.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Bí Mật Thành Công</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>92.000</ins> <del>172.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -114,9 +117,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-4.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Khởi Nguồn Trực Giác</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>123.000</ins> <del>150.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -129,9 +132,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-2.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Mắt Biếc</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>81.000</ins> <del>110.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -144,9 +147,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-1.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Sách giáo khoa lớp 4</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>60.000</ins> <del>87.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -159,9 +162,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-3.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Phía Sau Nghi Can</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>76.000</ins> <del>109.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -174,9 +177,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-4.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Thất Tịch Không Mưa</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>58.000</ins> <del>86.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -189,9 +192,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-2.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Tư Tưởng Hồ Chí Minh</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>49.000</ins> <del>75.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -204,9 +207,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-1.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Máu Bẩn</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>184.000</ins> <del>239.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -219,9 +222,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-3.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Chú Thỏ Tinh Khôn</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>9.000</ins> <del>15.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
@@ -234,9 +237,9 @@
                         <div class="product-upper">
                             <img src="View/Resource/img/product-4.jpg" alt="">
                         </div>
-                        <h2><a href="">Apple new mac book 2015 March :P</a></h2>
+                        <h2><a href="">Những Điều Khoa Học Không Dạy Bạn</a></h2>
                         <div class="product-carousel-price">
-                            <ins>$899.00</ins> <del>$999.00</del>
+                            <ins>65.000</ins> <del>83.000</del>
                         </div>  
                         
                         <div class="product-option-shop">
