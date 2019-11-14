@@ -1,8 +1,9 @@
 <?php
 
-require_once SITE_ROOT."/Config/DBCon.php"
-require_once SITE_ROOT."/Entity/Products.php"
-class Products extends DBConnection
+require_once SITE_ROOT."/Config/DBCon.php";
+require_once SITE_ROOT."/Entity/Products.php";
+
+class ProductsDao extends DBConnection
 {
     public function __construct()
     {
@@ -32,28 +33,26 @@ class Products extends DBConnection
     public function getProductByCategory($Cate)
     {
         $result = $this->runQuery("SELECT *	FROM products WHERE category = '{$Cate}'");
-        if (!$result) 
-		{
-			return $result;
+        $ProductsList = array();
+        while ($row = $result->fetch_assoc())
+        {
+            $Products = new Products(
+                $row['id'],
+                $row['name'],
+                $row['category'],
+                $row['price'],
+                $row['sale'],
+                $row['imageLink']
+            );
+            array_push($ProductsList, $Products);
         }
-        $row = $result->fetch_assoc()
-        return new Products(
-            $row['id'],
-            $row['name'],
-            $row['category'],
-            $row['price'],
-            $row['sale'],
-            $row['imageLink']
-        );
+        $result->free();
+        return $ProductsList;
     }
 
     public function getProductById($Id)
     {
-        $result = $this->runQuery("SELECT *	FROM products WHERE id = '{$Id}'");
-        if (!$result) 
-		{
-			return $result;
-        }
+        $result = $this->runQuery("SELECT *	FROM products WHERE id = {$Id}");
         $row = $result->fetch_assoc()
         return new Producs(
             $row['id'],
@@ -70,11 +69,11 @@ class Products extends DBConnection
         return $this->runQuery(
             "INSERT INTO products(id,name,category,price,sale,imageLink)
             VALUE(
-                '{$Products->getId()}'
-                '{$Products->getName()}'
-                '{$Products->getCategory()}'
-                '{$Products->getPrice()}'
-                '{$Products->getSale()}'
+                '{$Products->getId()}',
+                '{$Products->getName()}',
+                '{$Products->getCategory()}',
+                '{$Products->getPrice()}',
+                '{$Products->getSale()}',
                 '{$Products->getImageLink()}'
             )"
         );
@@ -89,13 +88,13 @@ class Products extends DBConnection
                 price ='{$Products->getPrice}',
                 sale ='{$Products->getSale}',
                 imageLink ='{$Products->getImageLink}'
-            WHERE  id ='{$Products->getId}' "
+            WHERE  id ={$Products->getId} "
         );
     }
 
     public function deleteProduct($Id)
     {
-    $this->runQuery("DELETE FROM product WHERE id ={$Id}");
+        $this->runQuery("DELETE FROM product WHERE id ={$Id}");
     }
 
 }
