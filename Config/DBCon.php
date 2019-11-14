@@ -9,7 +9,7 @@
       $port = '3306';
       $username = 'root';
       $password = '';
-      $dbname = 'webbansach_db';
+      $dbname = 'libro';
       $this->db = new mysqli($host, $username, $password, $dbname, $port);
       $this->db->set_charset("utf8");
       if ($this->db->connect_error) {
