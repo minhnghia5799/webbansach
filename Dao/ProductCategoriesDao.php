@@ -3,7 +3,7 @@ require_once SITE_ROOT."/Config/DBCon.php";
 require_once SITE_ROOT."/Entity/ProductCategories.php";
 
 
-class ProductCategories extends DBConnection
+class ProductCategoriesDao extends DBConnection
 {
 	public function __construct() {
 		parent::__construct();
@@ -57,3 +57,4 @@ class ProductCategories extends DBConnection
 	{
 		$this->runQuery("DELETE FROM product_categories WHERE id = {$Id}");
 	}
+?>

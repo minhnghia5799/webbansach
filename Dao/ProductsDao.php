@@ -53,7 +53,7 @@ class ProductsDao extends DBConnection
     public function getProductById($Id)
     {
         $result = $this->runQuery("SELECT *	FROM products WHERE id = {$Id}");
-        $row = $result->fetch_assoc()
+        $row = $result->fetch_assoc();
         return new Products(
             $row['id'],
             $row['name'],
