@@ -210,18 +210,7 @@ ALTER TABLE `shippinginfo`
   ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`);
 COMMIT;
 
-insert into productcategories
-values 
-(1,'Chính trị-Pháp luật'),
-(2,'Kiến thức tổng hợp'),
-(3,'Kinh tế-Khoa học công nghệ'),
-(4,'Kỹ năng'),
-(5,'Lịch sử-Văn hóa xã hội'),
-(6,'Ngoại ngữ'),
-(7,'Sức khỏe-Sắc đẹp'),
-(8,'Tâm linh-Tôn giáo'),
-(9,'Thiếu nhi'),
-(10,'Văn học-Nghệ thuật');
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
