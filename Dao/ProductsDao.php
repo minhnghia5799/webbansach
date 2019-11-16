@@ -30,9 +30,9 @@ class ProductsDao extends DBConnection
         return $ProductsList;
     }
 
-    public function getProductByCategory($Cate)
+    public function getProductByCategory($CateId)
     {
-        $result = $this->runQuery("SELECT *	FROM products WHERE category = '{$Cate}'");
+        $result = $this->runQuery("SELECT *	FROM products WHERE category = '{$CateId}'");
         $ProductsList = array();
         while ($row = $result->fetch_assoc())
         {
@@ -83,12 +83,12 @@ class ProductsDao extends DBConnection
     {
         return this->runQuery(
             "UPDATE products
-            SET name ='{$Products->getName}',
-                category ='{$Products->getCategory}',
-                price ='{$Products->getPrice}',
-                sale ='{$Products->getSale}',
-                imageLink ='{$Products->getImageLink}'
-            WHERE  id ={$Products->getId} "
+            SET name ='{$Products->getName()}',
+                category ='{$Products->getCategory()}',
+                price ='{$Products->getPrice()}',
+                sale ='{$Products->getSale()}',
+                imageLink ='{$Products->getImageLink()}'
+            WHERE  id ={$Products->getId()} "
         );
     }
 
