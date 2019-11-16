@@ -212,6 +212,7 @@ COMMIT;
 
 ALTER TABLE `products` ADD `selledAmount` INT NOT NULL AFTER `imageLink`, ADD `ViewedAmount` BIGINT NOT NULL AFTER `selledAmount`;
 
+ALTER TABLE `products` CHANGE `ViewedAmount` `viewedAmount` BIGINT NOT NULL;
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

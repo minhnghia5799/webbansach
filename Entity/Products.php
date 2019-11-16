@@ -7,6 +7,8 @@ class Products
     private $price;
     private $sale;
     private $imageLink;
+    private $selledAmount;
+    private $viewedAmount;
 
     public function __construct( $Id, $Name, $Category, $Price, $Sale, $ImageLink)
     {
@@ -78,6 +80,24 @@ class Products
     $this->imageLink = $ImageLink;
     }
 
+    public function getSelledAmount()
+    {
+    return $this->selledAmount; 
+    }
+    
+    public function setSelledAmount($SelledAmount)
+    {
+    $this->selledAmount = $SelledAmount; 
+    }
 
+    public function getViewedAmount()
+    {
+    return $this->viewedAmount;
+    }
+   
+    public function setViewedAmount($ViewedAmount)
+    {
+    $this->viewedAmount = $ViewedAmount;
+    }
 }
 ?>

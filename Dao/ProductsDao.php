@@ -22,7 +22,9 @@ class ProductsDao extends DBConnection
                 $row['category'],
                 $row['price'],
                 $row['sale'],
-                $row['imageLink']
+                $row['imageLink'],
+                $row['selledAmount'],
+                $row['viewedAmount']
             );
             array_push($ProductsList, $Products);
         }
@@ -42,7 +44,9 @@ class ProductsDao extends DBConnection
                 $row['category'],
                 $row['price'],
                 $row['sale'],
-                $row['imageLink']
+                $row['imageLink'],
+                $row['selledAmount'],
+                $row['viewedAmount']
             );
             array_push($ProductsList, $Products);
         }
@@ -60,7 +64,9 @@ class ProductsDao extends DBConnection
             $row['category'],
             $row['price'],
             $row['sale'],
-            $row['imageLink']
+            $row['imageLink'],
+            $row['selledAmount'],
+            $row['viewedAmount']
         );
     }
 
@@ -74,7 +80,9 @@ class ProductsDao extends DBConnection
                 '{$Products->getCategory()}',
                 '{$Products->getPrice()}',
                 '{$Products->getSale()}',
-                '{$Products->getImageLink()}'
+                '{$Products->getImageLink()}',
+                '{$Products->getSelledAmount()}',
+                '{$Products->getViewedAmount()}'
             )"
         );
     }
@@ -87,7 +95,9 @@ class ProductsDao extends DBConnection
                 category ='{$Products->getCategory()}',
                 price ='{$Products->getPrice()}',
                 sale ='{$Products->getSale()}',
-                imageLink ='{$Products->getImageLink()}'
+                imageLink ='{$Products->getImageLink()}',
+                selledAmount = '{$Products->getSelledAmount()}',
+                viewedAmount = '{$Products->getViewedAmount()}'
             WHERE  id ={$Products->getId()} "
         );
     }
