@@ -210,6 +210,8 @@ ALTER TABLE `shippinginfo`
   ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`);
 COMMIT;
 
+ALTER TABLE `products` ADD `selledAmount` INT NOT NULL AFTER `imageLink`, ADD `ViewedAmount` BIGINT NOT NULL AFTER `selledAmount`;
+
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
