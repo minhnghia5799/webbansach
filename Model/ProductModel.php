@@ -33,7 +33,7 @@ class ProductModel
 
 
 	// Shop Page
-	public function getProductByNumberList($num)
+	public function getProductByNumberList($num, $productList)
 	{
 		$newList = array();
 		for ($i = $num*12-12; $i <= $num*12-1; $i++)

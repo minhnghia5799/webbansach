@@ -20,6 +20,17 @@ class ProductCategoriesDao extends DBConnection
 		);
 	}
 
+	public function getNameById($Id)
+	{
+		$result = $this->runQuery("SELECT * FROM productcategories WHERE id = {$Id} ");
+		$row = $result->fetch_assoc();
+
+		return new ProductCategories(
+			$row['id'],
+			$row['name']
+		);
+	}
+
 	public function getAllProductCategories()
 	{
 		$result = $this->runQuery("SELECT * FROM productcategories");
@@ -62,4 +73,5 @@ class ProductCategoriesDao extends DBConnection
 	{
 		$this->runQuery("DELETE FROM productcategories WHERE id = {$Id}");
 	}
+}
 ?>

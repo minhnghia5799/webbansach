@@ -46,7 +46,7 @@
                         <div class="newsletter-form">
                             <form action="">
                                 <input type="email" placeholder="Nhập email của bạn">
-                                <input type="submit" value="Đăng ký">
+                                <input type="submit" value="Đăng ký" style="pointer-events: none; cursor: default;">
                             </form>
                         </div>
                     </div>

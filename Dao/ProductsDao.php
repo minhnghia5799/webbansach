@@ -81,7 +81,7 @@ class ProductsDao extends DBConnection
 
     public function updateProduct($Products)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE products
             SET name ='{$Products->getName()}',
                 category ='{$Products->getCategory()}',

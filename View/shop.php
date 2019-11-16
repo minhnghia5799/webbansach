@@ -26,7 +26,6 @@
    
 
 </select>
-    <br>
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
@@ -69,29 +68,40 @@
         <div class="container">
             <div class="row">
 
+                <?php
+
+                    for ($i = 0; $i < count($listShop); $i++)
+                    {
+
+                ?>
+                            
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
-                        <a href="">
-                        <div class="product-upper">
-                            <img src="View/Resource/img/product-2.jpg" alt="">
-                        </div>
-                        <h2>Siêu Thỏ</h2>
+                        <a href="?page=single-product&id=<?php echo $listShop[$i]->getId(); ?>">
+                            <div class="product-upper">
+                                <img src="<?php echo $listShop[$i]->getImageLink(); ?>" alt="">
+                            </div>
+                            <h2><?php echo $listShop[$i]->getName(); ?></h2>
                         </a>
                         <div class="product-carousel-price">
-                            <ins>29.000</ins> <del>42.000</del>
-                        </div>  
-
-                        
+                            <ins><?php echo $listShop[$i]->getSale(); ?></ins> <del><?php echo $listShop[$i]->getPrice(); ?></del>
+                        </div>                  
                         <div class="product-option-shop">
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="" style="pointer-events: none; cursor: default;" >Thêm vào giỏ hàng</a>
                         </div>                       
                     </div>
-                </div>
+                </div>        
+                    
+                <?php 
+
+                    }
+
+                ?>
 
             </div>
 
-            <?php 
-                require_once SITE_ROOT."View/Layout/NumListShop.php";
+            <?php
+                require_once SITE_ROOT."/View/Layout/NumListShop.php";
             ?>
             
             

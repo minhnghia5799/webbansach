@@ -1,6 +1,18 @@
 <?php
 
-    if (!isset($_GET['page'])) require_once SITE_ROOT."/View/error.html";
-    else require_once SITE_ROOT."/View/single-product.php";
+	require_once SITE_ROOT."/Model/ProductModel.php";	
+	require_once SITE_ROOT."/Services/ShopServices.php";
+
+
+	$pModel = new ProductModel();
+	$sServices = new ShopServices();
+
+    if (!isset($_GET['page']) || !isset($_GET['id'])) require_once SITE_ROOT."/View/error.html";
+    else
+    {
+    	$p = $sServices->getProductById($_GET['id']);
+        $cate = $sServices->getNameById($p->getCategory());
+    	require_once SITE_ROOT."/View/single-product.php";	
+    } 
 
 ?>

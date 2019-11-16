@@ -46,11 +46,11 @@
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="">
                             <input type="text" placeholder="Search products...">
-                            <input type="submit" value="Search">
+                            <input type="submit" value="Search" style="pointer-events: none; cursor: default;">
                         </form>
                     </div>
                     
-                    <div class="single-sidebar">
+                    <div class="single-sidebar" style="display:none;">
                         <h2 class="sidebar-title">Products</h2>
                         <div class="thubmnail-recent">
                             <img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     
-                    <div class="single-sidebar">
+                    <div class="single-sidebar" style="display:none;">
                         <h2 class="sidebar-title">Recent Posts</h2>
                         <ul>
                             <li><a href="">Sony Smart TV - 2015</a></li>
@@ -97,63 +97,58 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
-                            <a href="">Home</a>
-                            <a href="">Category Name</a>
-                            <a href="">Sony Smart TV - 2015</a>
+                            <a href="?page=home">Home</a>
+                            <a href=""><?php echo $cate->getName(); ?></a>
+                            <a href="" style="pointer-events: none; cursor: default;"><?php echo $p->getName(); ?></a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="img/product-2.jpg" alt="">
+                                        <img src="<?php echo $p->getImageLink(); ?>" alt="">
                                     </div>
                                     
-                                    <div class="product-gallery">
-                                        <img src="img/product-thumb-1.jpg" alt="">
-                                        <img src="img/product-thumb-2.jpg" alt="">
-                                        <img src="img/product-thumb-3.jpg" alt="">
-                                    </div>
                                 </div>
                             </div>
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">Sony Smart TV - 2015</h2>
+                                    <h2 class="product-name"><?php echo $p->getName(); ?></h2>
                                     <div class="product-inner-price">
-                                        <ins>$700.00</ins> <del>$100.00</del>
+                                        <ins><?php echo $p->getSale(); ?>VND</ins> <del><?php echo $p->getPrice(); ?>VND</del>
                                     </div>    
                                     
                                     <form action="" class="cart">
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>
-                                        <button class="add_to_cart_button" type="submit">Add to cart</button>
+                                        <button class="add_to_cart_button" type="submit" style="pointer-events: none; cursor: default;">Add to cart</button>
                                     </form>   
                                     
                                     <div class="product-inner-category">
-                                        <p>Category: <a href="">Summer</a>. Tags: <a href="">awesome</a>, <a href="">best</a>, <a href="">sale</a>, <a href="">shoes</a>. </p>
+                                        <p>Category: <a href=""><?php echo $cate->getName(); ?></p>
                                     </div> 
                                     
                                     <div role="tabpanel">
                                         <ul class="product-tab" role="tablist">
-                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Description</a></li>
-                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Reviews</a></li>
+                                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô tả</a></li>
+                                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Nhận xét</a></li>
                                         </ul>
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                                <h2>Product Description</h2>  
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla. Quisque volutpat nulla risus, id maximus ex aliquet ut. Suspendisse potenti. Nulla varius lectus id turpis dignissim porta. Quisque magna arcu, blandit quis felis vehicula, feugiat gravida diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac sodales nisl. Aliquam eget dolor eget elit malesuada aliquet. In varius lorem lorem, semper bibendum lectus lobortis ac.</p>
+                                                <h2>Mô tả sản phẩm</h2>  
+                                                <p>Rất tốt luôn.</p>
 
-                                                <p>Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi. Etiam scelerisque tincidunt quam facilisis lobortis. In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus, non malesuada sem accumsan in. Morbi vel sodales libero.</p>
+                                                <p>Quá xịn luôn.</p>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
-                                                <h2>Reviews</h2>
+                                                <h2>Nhận xét</h2>
                                                 <div class="submit-review">
-                                                    <p><label for="name">Name</label> <input name="name" type="text"></p>
-                                                    <p><label for="email">Email</label> <input name="email" type="email"></p>
+                                                    <p><label for="name">Tên của bạn</label> <input name="name" type="text"></p>
+                                                    <p><label for="email">Địa chỉ Email của bạn</label> <input name="email" type="email"></p>
                                                     <div class="rating-chooser">
-                                                        <p>Your rating</p>
+                                                        <p>Đánh giá của bạn</p>
 
                                                         <div class="rating-wrap-post">
                                                             <i class="fa fa-star"></i>
@@ -163,8 +158,8 @@
                                                             <i class="fa fa-star"></i>
                                                         </div>
                                                     </div>
-                                                    <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                    <p><input type="submit" value="Submit"></p>
+                                                    <p><label for="review">Nhận xét của bạn</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
+                                                    <p><input type="submit" value="Gửi" style="pointer-events: none; cursor: default;"></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -175,7 +170,7 @@
                         </div>
                         
                         
-                        <div class="related-products-wrapper">
+                        <div class="related-products-wrapper" style="display:none;">
                             <h2 class="related-products-title">Related Products</h2>
                             <div class="related-products-carousel">
                                 <div class="single-product">

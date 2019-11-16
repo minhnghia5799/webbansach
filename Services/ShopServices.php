@@ -1,7 +1,7 @@
 <?php
 
 require_once SITE_ROOT."/Dao/ProductCategoriesDao.php";
-require_once SITE_ROOT."/Dao/ProductDao.php";
+require_once SITE_ROOT."/Dao/ProductsDao.php";
 
 class ShopServices
 {
@@ -9,7 +9,7 @@ class ShopServices
 	private $productCategoriesDao;
 
 	public function __construct() {
-		$this->productDao = new ProductDao();
+		$this->productDao = new ProductsDao();
 		$this->productCategoriesDao = new ProductCategoriesDao();
     }
 
@@ -54,22 +54,27 @@ class ShopServices
 
     public function getIdByNameProductCategories($Name)
     {
-    	return $this->ProductCategoriesDao->getIdByNameProductCategories($Name);
+    	return $this->productCategoriesDao->getIdByNameProductCategories($Name);
+    }
+
+    public function getNameById($Id)
+    {
+        return $this->productCategoriesDao->getNameById($Id);
     }
 
     public function insertProductCategories($ProductCategories)
     {
-    	$this->ProductCategoriesDao->insertProductCategories($ProductCategories);
+    	$this->productCategoriesDao->insertProductCategories($ProductCategories);
     }
 
     public function updateProductCategories($ProductCategories)
     {
-    	$this->ProductCategoriesDao->updateProductCategories($ProductCategories);
+    	$this->productCategoriesDao->updateProductCategories($ProductCategories);
     }
 
     public function deleteProductCategories($Id)
     {
-    	$this->ProductCategoriesDao->deleteProductCategories($Id);
+    	$this->productCategoriesDao->deleteProductCategories($Id);
     }
 }
 
