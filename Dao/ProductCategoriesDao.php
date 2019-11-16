@@ -11,7 +11,7 @@ class ProductCategoriesDao extends DBConnection
 	
     public function getIdByNameProductCategory($Name)
 	{
-		$result = $this->runQuery("SELECT name FROM product_categories WHERE name = '$Name' ");
+		$result = $this->runQuery("SELECT name FROM product_categories WHERE name = '{$Name}' ");
 
 		return $result->fetch_assoc()['id'];
 	}
