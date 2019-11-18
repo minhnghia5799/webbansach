@@ -10,7 +10,7 @@ class Products
     private $selledAmount;
     private $viewedAmount;
 
-    public function __construct( $Id, $Name, $Category, $Price, $Sale, $ImageLink)
+    public function __construct( $Id, $Name, $Category, $Price, $Sale, $ImageLink, $SelledAmount, $ViewedAmount)
     {
     $this->id = $Id;
     $this->name = $Name;
@@ -18,6 +18,8 @@ class Products
     $this->price = $Price;
     $this->sale = $Sale;
     $this->imageLink = $ImageLink;
+    $this->selledAmount = $SelledAmount;
+    $this->viewedAmount = $ViewedAmount;
     }
 
     public function getId()

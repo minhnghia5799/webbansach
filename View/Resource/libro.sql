@@ -59,7 +59,7 @@ CREATE TABLE `products` (
   `category` bigint(10) NOT NULL,
   `price` int(11) NOT NULL,
   `sale` float NOT NULL,
-  `imageLink` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `imageLink` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------

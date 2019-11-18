@@ -10,7 +10,7 @@ values
 (7,'SucKhoe-SacDep'),
 (8,'Tâm linh-Tôn giáo'),
 (9,'ThieuNhi'),
-(10,'VanHọc-NgheThuat');
+(10,'VanHoc-NgheThuat');
 
 INSERT INTO products
 VALUES
@@ -414,60 +414,60 @@ VALUES
 
 ('','Bí ẩn làng ma sói',10,
 64000,
-59000,'View/Resource/book_img/VanHọc-NgheThuat/sach100.jpg',0,0),
+59000,'View/Resource/book_img/VanHoc-NgheThuat/sach100.jpg',0,0),
 
 ('','Bố già',10,
 76000,
-63000,'View/Resource/book_img/VanHọc-NgheThuat/sach101.jpg',0,0),
+63000,'View/Resource/book_img/VanHoc-NgheThuat/sach101.jpg',0,0),
 
 ('','Chiến binh cầu vồng',10,
 69000,
-52000,'View/Resource/book_img/VanHọc-NgheThuat/sach102.jpg',0,0),
+52000,'View/Resource/book_img/VanHoc-NgheThuat/sach102.jpg',0,0),
 
 ('','Cho xin một vé đi tuổi thơ',10,
 75000,
-61000,'View/Resource/book_img/VanHọc-NgheThuat/sach103.jpg',0,0),
+61000,'View/Resource/book_img/VanHoc-NgheThuat/sach103.jpg',0,0),
 
 ('','Cuốn theo chiều gió',10,
 67000,
-59000,'View/Resource/book_img/VanHọc-NgheThuat/sach104.jpg',0,0),
+59000,'View/Resource/book_img/VanHoc-NgheThuat/sach104.jpg',0,0),
 
 ('','Thất tịch không mưa',10,
 72000,
-57000,'View/Resource/book_img/VanHọc-NgheThuat/sach105.jpg',0,0),
+57000,'View/Resource/book_img/VanHoc-NgheThuat/sach105.jpg',0,0),
 
 ('','Hai số phận',10,
 74000,
-59000,'View/Resource/book_img/VanHọc-NgheThuat/sach106.jpg',0,0),
+59000,'View/Resource/book_img/VanHoc-NgheThuat/sach106.jpg',0,0),
 
 ('','Không gia đình',10,
 117000,
-89000,'View/Resource/book_img/VanHọc-NgheThuat/sach107.jpg',0,0),
+89000,'View/Resource/book_img/VanHoc-NgheThuat/sach107.jpg',0,0),
 
 ('','Kiêu hãnh và định kiến',10,
 69000,
-53000,'View/Resource/book_img/VanHọc-NgheThuat/sach108.jpg',0,0),
+53000,'View/Resource/book_img/VanHoc-NgheThuat/sach108.jpg',0,0),
 
 ('','Mắt biếc',10,
 73000,
-59000,'View/Resource/book_img/VanHọc-NgheThuat/sach109.jpg',0,0),
+59000,'View/Resource/book_img/VanHoc-NgheThuat/sach109.jpg',0,0),
 
 ('','Nếu biết trăm năm là hữu hạn',10,
 75000,
-63000,'View/Resource/book_img/VanHọc-NgheThuat/sach110.jpg',0,0),
+63000,'View/Resource/book_img/VanHoc-NgheThuat/sach110.jpg',0,0),
 
 
 ('','Nhà giả kim',10,
 79000,
-61000,'View/Resource/book_img/VanHọc-NgheThuat/sach111.jpg',0,0),
+61000,'View/Resource/book_img/VanHoc-NgheThuat/sach111.jpg',0,0),
 
 ('','Những tấm lòng cao cả',10,
 87000,
-64000,'View/Resource/book_img/VanHọc-NgheThuat/sach112.jpg',0,0),
+64000,'View/Resource/book_img/VanHoc-NgheThuat/sach112.jpg',0,0),
 
 ('','Phía sau nghi can',10,
 83000,
-69000,'View/Resource/book_img/VanHọc-NgheThuat/sach113.jpg',0,0);
+69000,'View/Resource/book_img/VanHoc-NgheThuat/sach113.jpg',0,0);
 
 
 
