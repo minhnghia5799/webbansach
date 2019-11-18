@@ -11,6 +11,7 @@
     else
     {
     	$p = $sServices->getProductById($_GET['id']);
+        $sServices->updateViewedAmountProduct($p->getViewedAmount()+1, $p->getId());
         $cate = $sServices->getNameById($p->getCategory());
     	require_once SITE_ROOT."/View/single-product.php";	
     } 

@@ -17,27 +17,27 @@ VALUES
 
 (1,'Bộ luật dân sự',1,
 120000,
-95000,'View/Resource/book_img/ChinhTri-PhapLuat/sach1.jpg',0,0),
+95000,'View/Resource/book_img/ChinhTri-PhapLuat/sach1.jpg',3,0),
 
 ('','Bộ luật hình sự',1,
 132000,
-103000,'View/Resource/book_img/ChinhTri-PhapLuat/sach2.jpg',0,0),
+103000,'View/Resource/book_img/ChinhTri-PhapLuat/sach2.jpg',2,0),
 
 ('','Bộ luật tố tụng dân sự',1,
 146000,
-127000,'View/Resource/book_img/ChinhTri-PhapLuat/sach3.jpg',0,0),
+127000,'View/Resource/book_img/ChinhTri-PhapLuat/sach3.jpg',1,0),
 
 ('','Chính trị luận',1,
 105000,
-82000,'View/Resource/book_img/ChinhTri-PhapLuat/sach4.jpg',0,0),
+82000,'View/Resource/book_img/ChinhTri-PhapLuat/sach4.jpg',0,4),
 
 ('','Giải quyết tranh chấp hợp đồng',1,
 90000,
-77000,'View/Resource/book_img/ChinhTri-PhapLuat/sach5.png',0,0),
+77000,'View/Resource/book_img/ChinhTri-PhapLuat/sach5.png',0,3),
 
 ('','Hiến pháp',1,
 137000,
-114000,'View/Resource/book_img/ChinhTri-PhapLuat/sach6.jpg',0,0),
+114000,'View/Resource/book_img/ChinhTri-PhapLuat/sach6.jpg',0,2),
 
 ('','Hồi ký Lý Quang Diệu',1,
 150000,
@@ -196,7 +196,7 @@ VALUES
 
 ('','Trên đường băng',4,
 118000,
-99000,'View/Resource/book_img/KyNang/sach45.jpg',0,0),
+99000,'View/Resource/book_img/KyNang/sach45.gif',0,0),
 
 ('','100 gương hiếu học của các doanh nhân nổi tiếng',5,
 88000,
@@ -208,7 +208,7 @@ VALUES
 
 ('','Đất lề quê thói',5,
 71000,
-59000,'View/Resource/book_img/LichSu-VanHoaXaHoi/sach48.jpg',0,0),
+59000,'View/Resource/book_img/LichSu-VanHoaXaHoi/sach48.png',0,0),
 
 ('','Đối thoại với nền văn minh cổ Champa',5,
 79000,
@@ -244,10 +244,10 @@ VALUES
 
 ('','Giáo trình hán ngữ',6,
 81000,
-69000,'View/Resource/book_img/NgoaiNgu/sach57.jpg',0,0),
+69000,'View/Resource/book_img/NgoaiNgu/sach57.png',0,0),
 ('','Hack não 1500',6,
 94000,
-79000,'View/Resource/book_img/NgoaiNgu/sach58.jpg',0,0),
+79000,'View/Resource/book_img/NgoaiNgu/sach58.png',0,0),
 
 ('','Luyện siêu trí nhớ từ vựng tiếng Anh',6,
 84000,
@@ -268,7 +268,7 @@ VALUES
 
 ('','Tự học tiếng Trung cho người mới bắt đầu',6,
 70000,
-61000,'View/Resource/book_img/NgoaiNgu/sach64.jpg',0,0),
+61000,'View/Resource/book_img/NgoaiNgu/sach64.png',0,0),
 
 ('','Vừa lười vừa bận vẫn giỏi tiếng Anh',6,
 89000,
@@ -414,7 +414,7 @@ VALUES
 
 ('','Bí ẩn làng ma sói',10,
 64000,
-59000,'View/Resource/book_img/VanHoc-NgheThuat/sach100.jpg',0,0),
+59000,'View/Resource/book_img/VanHoc-NgheThuat/sach100.png',0,0),
 
 ('','Bố già',10,
 76000,

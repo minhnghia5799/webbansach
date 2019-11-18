@@ -7,7 +7,7 @@
                     </div>
                 </div>
                 
-                <div class="col-sm-6">
+                <div class="col-sm-6" style="pointer-events: none; cursor: default;">
                     <div class="shopping-item">
                         <a href="?page=cart">Giỏ hàng - <span class="cart-amunt">100.000<sup>VNĐ</sup></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">0</span></a>
                     </div>

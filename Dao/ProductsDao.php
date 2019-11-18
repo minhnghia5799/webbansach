@@ -34,7 +34,7 @@ class ProductsDao extends DBConnection
 
     public function getProductByCategory($CateId)
     {
-        $result = $this->runQuery("SELECT *	FROM products WHERE category = '{$CateId}'");
+        $result = $this->runQuery("SELECT *	FROM products WHERE category = {$CateId}");
         $ProductsList = array();
         while ($row = $result->fetch_assoc())
         {
@@ -73,7 +73,7 @@ class ProductsDao extends DBConnection
     public function insertProduct($Products)
     {
         return $this->runQuery(
-            "INSERT INTO products(id,name,category,price,sale,imageLink)
+            "INSERT INTO products(id,name,category,price,sale,imageLink,selledAmount,viewedAmount)
             VALUE(
                 '{$Products->getId()}',
                 '{$Products->getName()}',
@@ -99,6 +99,24 @@ class ProductsDao extends DBConnection
                 selledAmount = '{$Products->getSelledAmount()}',
                 viewedAmount = '{$Products->getViewedAmount()}'
             WHERE  id ={$Products->getId()} "
+        );
+    }
+
+    public function updateViewedAmountProduct($ViewedAmount, $Id)
+    {
+        return $this->runQuery(
+            "UPDATE products
+            SET viewedAmount = {$ViewedAmount}
+            WHERE  id ={$Id} "
+        );
+    }
+
+    public function updateSelledAmountProduct($SelledAmount, $Id)
+    {
+        return $this->runQuery(
+            "UPDATE products
+            SET selledAmount = {$SelledAmount}
+            WHERE  id ={$Id} "
         );
     }
 

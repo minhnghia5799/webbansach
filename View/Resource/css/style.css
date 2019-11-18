@@ -394,7 +394,9 @@ z-index: 999;}
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%;overflow: hidden;border: 1px solid #ddd;
+    width: 100%;
+    overflow: hidden;
+    /*border: 1px solid #ddd;*/
 }
 .product-hover:after {
   background: none repeat scroll 0 0 #000;
@@ -404,7 +406,8 @@ z-index: 999;}
   opacity: 0.6;
   position: absolute;
   top: 0;
-  width: 100%;transition: .4s;
+  width: 100%;
+  transition: .4s;
 }
 .product-hover a {
     background: none repeat scroll 0 0 #5a88ca;
@@ -418,12 +421,13 @@ z-index: 999;}
     position: absolute;
     text-align: center;
     text-transform: uppercase;
-    border: 1px solid #5a88ca;
+    /*border: 1px solid #5a88ca;*/
     width: 80%;z-index: 99;transition: .4s;
 }
 .product-hover a:hover {
   background: #000;
-  text-decoration: none;border-color: #444;
+  text-decoration: none;
+  border-color: #444;
 }
 .product-carousel-price ins {
   color: #5a88ca;
@@ -456,8 +460,8 @@ z-index: 999;}
   overflow: hidden;
 }
 .single-product:hover {}
-.single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
-.single-product:hover .product-hover a.view-details-link {bottom: 32%;}
+.single-product:hover .product-hover a.add-to-cart-link {top: 25%;}
+.single-product:hover .product-hover a.view-details-link {bottom: 25%;}
 .single-product:hover .product-hover:after{left: 0}
 
 

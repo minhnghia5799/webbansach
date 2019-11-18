@@ -20,9 +20,9 @@
                         <h2 class="footer-wid-title">Điều hướng </h2>
                         <ul>
                         <li class="<?php if(!isset($_GET['page']))if($_GET['page']=='home') echo 'active' ?>"><a href="?page=home">Trang chủ</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='shop') echo 'active' ?>"><a href="?page=shop" >Cửa hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='cart') echo 'active' ?>"><a href="?page=cart">Giỏ hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact') echo 'active' ?>"><a href="?page=contact">Liên hệ</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='shop') echo 'active' ?>"><a href="?page=shop&num=1" >Cửa hàng</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='cart') echo 'active' ?>" style="pointer-events: none; cursor: default;"><a href="?page=cart">Giỏ hàng</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact') echo 'active' ?>" style="pointer-events: none; cursor: default;"><a href="?page=contact">Liên hệ</a></li>
                         </ul>                        
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Danh mục</h2>
-                        <ul>
+                        <ul style="display: none;">
                             <!-- mày phải dùng php để load table danh mục lên đây -->
                             <li><a href="">Truyện tranh thiếu nhi</a></li>
                             <li><a href="">Văn học Việt Nam</a></li>

@@ -20,6 +20,13 @@ class ShopServices
     	return $this->productDao->getAllProducts();
     }
 
+    public function getNumberPageProducts()
+    {
+        $list = $this->productDao->getAllProducts();
+        if (count($list)%12 == 0) return round(count($list)/12);
+        else return round(count($list)/12)+1;
+    }
+
     public function getProductByCategory($Category)
     {
     	return $this->productDao->getProductByCategory($Category);
@@ -38,6 +45,16 @@ class ShopServices
     public function updateProduct($Product)
     {
     	$this->productDao->updateProduct($Product);
+    }
+
+    public function updateViewedAmountProduct($ViewedAmount, $Id)
+    {
+        $this->productDao->updateViewedAmountProduct($ViewedAmount, $Id);
+    }
+
+    public function updateSelledAmountProduct($SelledAmount, $Id)
+    {
+        $this->productDao->updateSelledAmountProduct($SelledAmount, $Id);
     }
 
     public function deleteProduct($Id)

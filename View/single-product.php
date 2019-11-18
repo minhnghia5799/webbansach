@@ -98,7 +98,7 @@
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
                             <a href="?page=home">Home</a>
-                            <a href=""><?php echo $cate->getName(); ?></a>
+                            <a href="" style="pointer-events: none; cursor: default;"><?php echo $cate->getName(); ?></a>
                             <a href="" style="pointer-events: none; cursor: default;"><?php echo $p->getName(); ?></a>
                         </div>
                         
@@ -127,7 +127,7 @@
                                     </form>   
                                     
                                     <div class="product-inner-category">
-                                        <p>Category: <a href=""><?php echo $cate->getName(); ?></p>
+                                        <p>Category: <a href="" style="pointer-events: none; cursor: default;"><?php echo $cate->getName(); ?></p>
                                     </div> 
                                     
                                     <div role="tabpanel">

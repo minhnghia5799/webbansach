@@ -76,15 +76,15 @@
                 ?>
                             
                 <div class="col-md-3 col-sm-6">
-                    <div class="single-shop-product">
+                    <div class="single-shop-product" style="border: 5px groove; border-radius: 10px; text-align: center; vertical-align: middle; padding-top: 20px; padding-bottom: 20px; padding-left: 10px; padding-right: 10px; max-width:300px; min-height: 390px;">
                         <a href="?page=single-product&id=<?php echo $listShop[$i]->getId(); ?>">
                             <div class="product-upper">
-                                <img src="<?php echo $listShop[$i]->getImageLink(); ?>" alt="">
+                                <img src="<?php echo $listShop[$i]->getImageLink(); ?>" alt="" style="max-height: 200px; max-width: 200px;">
                             </div>
-                            <h2><?php echo $listShop[$i]->getName(); ?></h2>
+                            <h2><font size="3.5"><b><?php echo $listShop[$i]->getName(); ?></b></font></h2>
                         </a>
                         <div class="product-carousel-price">
-                            <ins><?php echo $listShop[$i]->getSale(); ?></ins> <del><?php echo $listShop[$i]->getPrice(); ?></del>
+                            <ins><?php echo $listShop[$i]->getSale(); ?> VNĐ</ins> <del><?php echo $listShop[$i]->getPrice(); ?> VNĐ</del>
                         </div>                  
                         <div class="product-option-shop">
                             <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="" style="pointer-events: none; cursor: default;" >Thêm vào giỏ hàng</a>

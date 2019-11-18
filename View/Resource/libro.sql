@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `orders` (
   `id` bigint(10) NOT NULL,
-  `userId` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userId` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `totalPrice` int(11) NOT NULL,
   `status` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -55,7 +55,7 @@ CREATE TABLE `ordercontent` (
 
 CREATE TABLE `products` (
   `id` bigint(10) NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category` bigint(10) NOT NULL,
   `price` int(11) NOT NULL,
   `sale` float NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `products` (
 
 CREATE TABLE `productcategories` (
   `id` bigint(10) NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `name` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -81,12 +81,12 @@ CREATE TABLE `productcategories` (
 
 CREATE TABLE `shippinginfo` (
   `orderId` bigint(10) NOT NULL,
-  `firstname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `county` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `province` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `streetAddress` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `firstname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `county` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `province` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `streetAddress` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `postcode` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tel` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `notes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
@@ -99,15 +99,15 @@ CREATE TABLE `shippinginfo` (
 --
 
 CREATE TABLE `users` (
-  `id` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `firstname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `county` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `province` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `streetAddress` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `firstname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lastname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `county` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `province` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `streetAddress` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phoneNumber` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
