@@ -1,79 +1,42 @@
 <?php
 class Users
 {
-    private $orderId;
-    private $firstname;
-    private $lastname;
-    private $country;
-    private $county;
+    private $userName;
+    private $pass;
+    private $email;
+    private $name;
     private $province;
-    private $streetAddress;
-    private $postcode;
-    private $tel;
-    private $notes;
+    private $address;
+    private $phoneNumber;
+   
 
-    public function __construct( $OrderId, $Firstname, $Lastname, $Country, $County, $Province, $StreetAddress, $Postcode, $Tel, $Notes)
+    public function __construct( $UserName, $Name, $Province, $Address, $PhoneNumber)
     {
-    $this->orderId = $OrderId;
-    $this->firstname = $Firstname;
-    $this->lastname = $Lastname;
-    $this->country = $Country;
-    $this->county = $County;
+    $this->userName = $UserName;
+    $this->name = $Name;
     $this->province = $Province;
-    $this->streetAddress = $StreetAddress;
-    $this->postcode = $Postcode;
-    $this->tel = $Tel;
-    $this->notes = $Notes;
+    $this->address = $Address;
+    $this->phoneNumber = $PhoneNumber;
     }
 
-    public function getOrderId()
+    public function getUserName()
     {
-    return $this->orderId;
+    return $this->userName;
     }
 
-    public function setOrderId($OrderId)
+    public function setUserName($UserName)
     {
-    $this->orderId = $OrderId;
+    $this->userName = $UserName;
     }
 
-    public function getFirstname()
+    public function getName()
     {
-    return $this->firstname;
+    return $this->name;
     }
 
-    public function setFirstname($Firstname)
+    public function setName($Name)
     {
-    $this->firstname = $Firstname;
-    }
-
-    public function getLastname()
-    {
-    return $this->lastname;
-    }
-
-    public function setLastname($Lastname)
-    {
-    $this->lastname = $Lastname;
-    }
-
-    public function getCountry()
-    {
-    return $this->country;
-    }
-
-    public function setCountry($Country)
-    {
-    $this->country = $Country;
-    }
-
-    public function getCounty()
-    {
-    return $this->county;
-    }
-
-    public function setCounty($County)
-    {
-    $this->county = $County;
+    $this->name = $Name;
     }
 
     public function getProvince()
@@ -86,44 +49,24 @@ class Users
     $this->province = $Province;
     }
 
-    public function getStreetAddress()
+    public function getAddress()
     {
-    return $this->streetAddress;
+    return $this->address;
     }
 
-    public function setStreetAddress($StreetAddress)
+    public function setAddress($Address)
     {
-    $this->streetAddress = $StreetAddress;
+    $this->address = $Address;
     }
 
-    public function getPostcode()
+    public function getPhoneNumber()
     {
-    return $this->postcode;
+    return $this->phoneNumber;
     }
 
-    public function setPostcode($Postcode)
+    public function setPhoneNumber($PhoneNumber)
     {
-    $this->postcode = $Postcode;
-    }
-
-    public function getTel()
-    {
-    return $this->tel;
-    }
-
-    public function setTel($Tel)
-    {
-    $this->tel = $Tel;
-    }
-
-    public function getNotes()
-    {
-    return $this->notes;
-    }
-
-    public function setNotes($Notes)
-    {
-    $this->notes = $Notes;
+    $this->phoneNumber = $PhoneNumber;
     }
 
 

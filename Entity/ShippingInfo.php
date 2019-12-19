@@ -1,131 +1,46 @@
 <?php
 class ShippingInfo
 {
-    private $orderId;
-    private $firstname;
-    private $lastname;
-    private $country;
-    private $county;
-    private $province;
-    private $streetAddress;
-    private $postcode;
-    private $tel;
-    private $notes;
+    private $id;
+    private $userName;
+    private $status;
 
-    public function __construct( $OrderId, $Firstname, $Lastname, $Country, $County, $Province, $StreetAddress, $Postcode, $Tel, $Notes)
+    public function __construct( $Id, $UserName, $Status, $Country, $County, $Province, $StreetAddress, $Postcode, $Tel, $Notes)
     {
-    $this->orderId = $OrderId;
-    $this->firstname = $Firstname;
-    $this->lastname = $Lastname;
-    $this->country = $Country;
-    $this->county = $County;
-    $this->province = $Province;
-    $this->streetAddress = $StreetAddress;
-    $this->postcode = $Postcode;
-    $this->tel = $Tel;
-    $this->notes = $Notes;
+    $this->id = $Id;
+    $this->userName = $UserName;
+    $this->status = $Status;
     }
 
-    public function getOrderId()
+    public function getId()
     {
-    return $this->orderId;
+    return $this->id;
     }
 
-    public function setOrderId($OrderId)
+    public function setId($Id)
     {
-    $this->orderId = $OrderId;
+    $this->id = $Id;
     }
 
-    public function getFirstname()
+    public function getUserName()
     {
-    return $this->firstname;
+    return $this->userName;
     }
 
-    public function setFirstname($Firstname)
+    public function setUserName($UserName)
     {
-    $this->firstname = $Firstname;
+    $this->userName = $UserName;
     }
 
-    public function getLastname()
+    public function getStatus()
     {
-    return $this->lastname;
+    return $this->status;
     }
 
-    public function setLastname($Lastname)
+    public function setStatus($Status)
     {
-    $this->lastname = $Lastname;
+    $this->status = $Status;
     }
-
-    public function getCountry()
-    {
-    return $this->country;
-    }
-
-    public function setCountry($Country)
-    {
-    $this->country = $Country;
-    }
-
-    public function getCounty()
-    {
-    return $this->county;
-    }
-
-    public function setCounty($County)
-    {
-    $this->county = $County;
-    }
-
-    public function getProvince()
-    {
-    return $this->province;
-    }
-
-    public function setProvince($Province)
-    {
-    $this->province = $Province;
-    }
-
-    public function getStreetAddress()
-    {
-    return $this->streetAddress;
-    }
-
-    public function setStreetAddress($StreetAddress)
-    {
-    $this->streetAddress = $StreetAddress;
-    }
-
-    public function getPostcode()
-    {
-    return $this->postcode;
-    }
-
-    public function setPostcode($Postcode)
-    {
-    $this->postcode = $Postcode;
-    }
-
-    public function getTel()
-    {
-    return $this->tel;
-    }
-
-    public function setTel($Tel)
-    {
-    $this->tel = $Tel;
-    }
-
-    public function getNotes()
-    {
-    return $this->notes;
-    }
-
-    public function setNotes($Notes)
-    {
-    $this->notes = $Notes;
-    }
-
 
 }
 ?>

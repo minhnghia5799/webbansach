@@ -1,47 +1,26 @@
 <?php
 class Orders
 {
-    private $id;
-    private $userId;
-    private $totalPrice;
+   
+    private $userName;
+    
     private $status;
 
-    public function __construct( $Id, $UserId, $TotalPrice, $Status)
+    public function __construct($UserName, $Status)
     {
-    $this->id = $Id;
-    $this->userId = $UserId;
-    $this->totalPrice = $TotalPrice;
+    $this->userName = $UserName;
     $this->status = $Status;
     }
 
-    public function getId()
+
+    public function getUserName()
     {
-    return $this->id;
+    return $this->userName;
     }
 
-    public function setId($Id)
+    public function setUserName($UserName)
     {
-    $this->id = $Id;
-    }
-
-    public function getUserId()
-    {
-    return $this->userId;
-    }
-
-    public function setUserId($UserId)
-    {
-    $this->userId = $UserId;
-    }
-
-    public function getTotalPrice()
-    {
-    return $this->totalPrice;
-    }
-
-    public function setTotalPrice($TotalPrice)
-    {
-    $this->totalPrice = $TotalPrice;
+    $this->userName = $UserName;
     }
 
     public function getStatus()

@@ -1,6 +1,6 @@
 <?php
 require_once SITE_ROOT."/Config/DBCon.php";
-require_once SITE_ROOT."/Entity/ProductCategories.php";
+require_once SITE_ROOT."/Entity/OrderContent.php";
 
 class OrderContentDao extends DBConnection
 {
@@ -9,14 +9,14 @@ class OrderContentDao extends DBConnection
 		parent::__construct();
     }
     
-    public function getOrderContentByOrderId($OrderId)
+    public function getOrderContentByUserName($OrderId)
     {
-        $result = $this->runQuery("SELECT *	FROM ordercontent WHERE orderId = '{$OrderId}'");
+        $result = $this->runQuery("SELECT *	FROM ordercontent WHERE userName = '{$UserName}'");
         $OrderContentList = array();
         while ($row = $result->fetch_assoc())
         {
             $OrderContent = new Ordercontent(
-                $row['orderId'],
+                $row['userName'],
                 $row['productId'],
                 $row['amount']
             );
@@ -29,9 +29,9 @@ class OrderContentDao extends DBConnection
     public function insertOrderContent($OrderContent)
     {
         return $this->runQuery(
-            "INSERT INTO ordercontent(orderId,productId,amount)
+            "INSERT INTO ordercontent(userName,productId,amount)
             VALUE (
-                '{$OrderContent->getOrderId}',
+                '{$OrderContent->getUserName}',
                 '{$OrderContent->getProductId}',
                 '{$OrderContent->getAmount}'
                 )"
@@ -45,12 +45,12 @@ class OrderContentDao extends DBConnection
                 SET 
                     productId='{$OrderContent->getProductId}',
                     amount='{$OrderContent->getAmount}'
-                WHERE orderId='{$OrderContent->getOrderId}'"
+                WHERE userName='{$OrderContent->getUserName}'"
         );
     }
-    public function deleteOrderContent($OrderId)
+    public function deleteOrderContent($UserName)
     {
-        $this->runQuery("DELETE FROM ordercontent WHERE orderId={$OrderId}");
+        $this->runQuery("DELETE FROM ordercontent WHERE userName={$UserName}");
     }
 }
 

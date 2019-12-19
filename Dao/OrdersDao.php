@@ -12,7 +12,7 @@ class OrdersDao extends DBConnection
 
     public function getOrdersByUserIdAndStatus($UserId, $Status)
     {
-        $result = $this->runQuery(" SELECT * from Orders where userid ='$UserId' && status = '$Status' ");
+        $result = $this->runQuery(" SELECT * from orders where userid ='$UserId' && status = '$Status' ");
         $OrdersList = array();
         while ($row = $result->fetch_assoc())
         {
@@ -31,11 +31,11 @@ class OrdersDao extends DBConnection
     public function insertOrders($Orders)
     {
         return $this->runQuery(
-            "INSERT INTO orders(id,userid,totalPrice,status)
+            "INSERT INTO orders(userName,status)
             value (
-                '{$Orders->getId()}',
-                '{$Orders->getUserId()}',
-                '{$Orders->getTotalPrice()}',
+                
+                '{$Orders->getUserName()}',
+                
                 '{$Orders->getStatus()}'
             )"
         );
@@ -45,16 +45,15 @@ class OrdersDao extends DBConnection
     {
         return this->runQuery(
             "UPDATE orders
-                SET userid='{$Order->getUserId}',
-                    totalPrice='{$Order->getTotalPrice}',
-                    status='{$Order->getStatus}'
-                WHERE id='{$Order->getId}'"
+                SET 
+                    status='{$Orders->getStatus()}'
+                WHERE userName='{$Orders->getUserName()}'"
         );
     }
 
-    public function deleteOrders($Id)
+    public function deleteOrders($UserName)
     {
-        $this->runQuery("DELETE FROM orders WHERE id={$Id}");
+        $this->runQuery("DELETE FROM orders WHERE userName={$UserName}");
     }
 
 }

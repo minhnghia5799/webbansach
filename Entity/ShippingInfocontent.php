@@ -1,25 +1,25 @@
 <?php
-class OrderContent
+class ShippingInfo
 {
-    private $userName;
+    private $idShip;
     private $productId;
     private $amount;
 
-    public function __construct( $UserName, $ProductId, $Amount)
+    public function __construct( $IdShip, $ProductId, $Amount)
     {
-    $this->userName = $UserName;
+    $this->idShip = $IdShip;
     $this->productId = $ProductId;
     $this->amount = $Amount;
     }
 
-    public function getUserName()
+    public function getIdShip()
     {
-    return $this->userName;
+    return $this->idShip;
     }
 
-    public function setUserName($UserName)
+    public function setIdShip($IdShip)
     {
-    $this->userName = $UserName;
+    $this->idShip = $IdShip;
     }
 
     public function getProductId()
@@ -41,7 +41,6 @@ class OrderContent
     {
     $this->amount = $Amount;
     }
-
 
 }
 ?>
