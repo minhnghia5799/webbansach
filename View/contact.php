@@ -58,23 +58,33 @@
         <form class="form-group" action="" method="POST">
             <div class="content-contact row">
             <div class="col-md-6">
-                <h1>Góp ý</h1>
-                <label for="contact-name">
-                <h5>Tên của bạn (bắt buộc):</h5>
-                </label>
-                <input id="contact-name" class="form-text w-100 mb-3" type="text" name="name" />
-                <label for="contact-email">
-                <h5>Email (bắt buộc):</h5>
-                </label>
-                <input id="contact-email" class="form-text w-100 mb-3" type="text" name="email" />
-                <label for="contact-subject">
+            <h3>Góp ý</h3>
+            <table>
+                <tr>
+                    <td><label for="contact-name">
+                    <h5>Tên của bạn (bắt buộc):</h5>
+                    </label></td>
+                    <td> <input id="contact-name" class="form-text w-100 mb-3" type="text" name="name" /><br></td>
+                </tr>
+                <tr>
+                <td><label for="contact-email">
+                <h5>Email (bắt buộc):</h5></label></td>
+                <td><input id="contact-email" class="form-text w-100 mb-3" type="text" name="email" /><br></td>
+                </tr>
+                <tr>
+                <td><label for="contact-subject">
                 <h5>Tiêu đề:</h5>
-                </label>
-                <input id="contact-subject" class="form-text w-100 mb-3" type="text" name="subject" />
-                <label for="contact-content">
+                </label></td>
+                <td><input id="contact-subject" class="form-text w-100 mb-3" type="text" name="subject" /><br></td>
+                </tr>
+                <tr>
+                <td><label for="contact-content">
                 <h5>Nội dung:</h5>
-                </label>
-                <textarea id="contact-content" class="form-text w-100 mb-3" name="content"></textarea>
+                </label></td>
+                <td><textarea id="contact-content" class="form-text w-100 mb-3" name="content"></textarea><br></td>
+                </tr>
+                
+                </table>
                 <input class="w-100" type="submit" value="Gửi đi" onclick="sendFeedback(event)" />
             </div>
             <div class="col-md-6">

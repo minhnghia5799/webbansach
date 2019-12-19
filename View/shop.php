@@ -39,30 +39,10 @@
     </div>
     
   
-            <!-- <b>Loại sách</b>
-            <select style="text-align:center" name=”loaisach” type="drop-down">
-            <option >Tất cả</option>
-            <option >Sách giáo khoa</option>
-            <option >Sách khoa học</option>
-            <option >Sách kinh doanh</option>
-            <option >Sách chính trị</option>
-            <option >Sách văn học</option>
-            <option >Truyện ngôn tình</option>
-            <option >Truyện thiếu nhi</option>
-            <option >Truyện tranh</option>
-            <option >Truyện ngôn tình</option>
-            <option >Truyện trinh thám</option>
-            <option >Tiểu thuyết</option>
-            </div>
-
-       <div class="box">
-      <div class="container-1">
-          <span class="icon"><i class="fa fa-search"></i></span>
-          <input type="search" id="search" placeholder="Tên sách" />
-      </div>
+    <div class="box" style="margin:40px 0px 0px 60px">
+      <input type="text" placeholder="Tên sách">
+      <input type="submit" value="Search">
     </div>
-    <button>Tìm kiếm </button> -->
-
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">

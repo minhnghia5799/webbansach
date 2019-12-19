@@ -1137,3 +1137,13 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .pagination > li > a, .pagination > li > span {
   color: #5a88ca;
 }
+
+.box {
+   height: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+     }
+ input::placeholder {
+  color: #5a88ca;
+}
