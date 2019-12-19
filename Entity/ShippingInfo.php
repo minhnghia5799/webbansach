@@ -5,7 +5,7 @@ class ShippingInfo
     private $userName;
     private $status;
 
-    public function __construct( $Id, $UserName, $Status, $Country, $County, $Province, $StreetAddress, $Postcode, $Tel, $Notes)
+    public function __construct( $Id, $UserName, $Status)
     {
     $this->id = $Id;
     $this->userName = $UserName;

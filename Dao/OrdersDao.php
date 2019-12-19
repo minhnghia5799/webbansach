@@ -10,16 +10,14 @@ class OrdersDao extends DBConnection
         parent::__construct();
     }
 
-    public function getOrdersByUserIdAndStatus($UserId, $Status)
+    public function getOrdersByUserName($UserName)
     {
-        $result = $this->runQuery(" SELECT * from orders where userid ='$UserId' && status = '$Status' ");
+        $result = $this->runQuery(" SELECT * from orders where userName ='$UserName'");
         $OrdersList = array();
         while ($row = $result->fetch_assoc())
         {
             $Orders= new Orders(
-            $row['id'],
-            $row['userid'],
-            $row['totalPrice'],
+            $row['userName'],
             $row['status']
             );
             array_push($OrdersList, $Orders);
@@ -41,13 +39,13 @@ class OrdersDao extends DBConnection
         );
     }
 
-    public function updateOrders($Orders)
+    public function updateOrders($UserName,$Status)
     {
         return this->runQuery(
             "UPDATE orders
                 SET 
-                    status='{$Orders->getStatus()}'
-                WHERE userName='{$Orders->getUserName()}'"
+                    status='{$Status}'
+                WHERE userName='{$UserName}'"
         );
     }
 
