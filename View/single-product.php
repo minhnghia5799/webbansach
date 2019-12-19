@@ -147,17 +147,6 @@
                                                 <div class="submit-review">
                                                     <p><label for="name">Tên của bạn</label> <input name="name" type="text"></p>
                                                     <p><label for="email">Địa chỉ Email của bạn</label> <input name="email" type="email"></p>
-                                                    <div class="rating-chooser">
-                                                        <p>Đánh giá của bạn</p>
-
-                                                        <div class="rating-wrap-post">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
-                                                    </div>
                                                     <p><label for="review">Nhận xét của bạn</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
                                                     <p><input type="submit" value="Gửi" style="pointer-events: none; cursor: default;"></p>
                                                 </div>

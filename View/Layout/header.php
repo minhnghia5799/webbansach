@@ -12,8 +12,8 @@
                                 <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li> -->
 
-                            <li><a href="#" style="pointer-events: none; cursor: default;"><i class="fa fa-user"></i> Đăng ký</a></li>
-                            <li><a href="#" style="pointer-events: none; cursor: default;"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                            <li><a href="?page=signup"><i class="fa fa-user"></i> Đăng ký</a></li>
+                            <li><a href="?page=login"><i class="fa fa-user"></i> Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>

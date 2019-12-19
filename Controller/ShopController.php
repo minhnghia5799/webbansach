@@ -5,7 +5,8 @@
 
 
 	$pModel = new ProductModel();
-	$sServices = new ShopServices();
+    $sServices = new ShopServices();
+    
     if (!isset($_GET['page'])) require_once SITE_ROOT."/View/error.html";
     else if ($_GET['page']=='home') 
     {
@@ -24,6 +25,7 @@
         {
             $listShop = $pModel->getProductByNumberList($_GET['num'], $sServices->getAllProducts());
             $listNum = $pModel->get5NumberList($_GET['num'], $total);
+            $listCate = $pModel->getAllProductCategories($sServices->getAllProductCategories());
             require_once SITE_ROOT."/View/shop.php";
         } 
     }

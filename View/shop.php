@@ -38,11 +38,24 @@
         </div>
     </div>
     
-  
+
     <div  style="margin:40px 0px 0px 60px">
-      <input type="text" placeholder="Tên sách">
-      <input type="submit" value="Search">
+        <input type="text" placeholder="Tên sách">
+        <input type="submit" value="Search">
     </div>
+
+    
+
+    <select name='name'>
+    <?php  
+        echo '<option value="Tất cả">Tất cả</option>';
+        for ($i=0; $i < count($listCate); $i++)
+        {
+            echo '<option value="'.$listCate[$i]->getName().'">'.$listCate[$i]->getName().'</option>';
+        }
+    ?>
+    </select><br>
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">

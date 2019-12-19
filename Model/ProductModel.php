@@ -116,6 +116,11 @@ class ProductModel
 
 		return $list;
 	}
+
+	public function getAllProductCategories($productCategoriesList)
+	{
+		return $productCategoriesList;
+	}
 }
 
 ?>

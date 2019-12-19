@@ -17,7 +17,7 @@ class ShopServices
     // Product
     public function getAllProducts()
     {
-    	return $this->productDao->getAllProducts();
+        return $this->productDao->getAllProducts();
     }
 
     public function getNumberPageProducts()
@@ -29,22 +29,22 @@ class ShopServices
 
     public function getProductByCategory($Category)
     {
-    	return $this->productDao->getProductByCategory($Category);
+        return $this->productDao->getProductByCategory($Category);
     }
 
     public function getProductById($Id)
     {
-    	return $this->productDao->getProductById($Id);
+        return $this->productDao->getProductById($Id);
     }
 
     public function insertProduct($Product)
     {
-    	$this->productDao->insertProduct($Product);
+        $this->productDao->insertProduct($Product);
     }
 
     public function updateProduct($Product)
     {
-    	$this->productDao->updateProduct($Product);
+        $this->productDao->updateProduct($Product);
     }
 
     public function updateViewedAmountProduct($ViewedAmount, $Id)

@@ -21,8 +21,8 @@
                         <ul>
                         <li class="<?php if(!isset($_GET['page']))if($_GET['page']=='home') echo 'active' ?>"><a href="?page=home">Trang chủ</a></li>
                         <li class="<?php if(isset($_GET['page']))if($_GET['page']=='shop') echo 'active' ?>"><a href="?page=shop&num=1" >Cửa hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='cart') echo 'active' ?>" style="pointer-events: none; cursor: default;"><a href="?page=cart">Giỏ hàng</a></li>
-                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact') echo 'active' ?>" style="pointer-events: none; cursor: default;"><a href="?page=contact">Liên hệ</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='order') echo 'active' ?>"><a href="?page=order">Giỏ hàng</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact') echo 'active' ?>"><a href="?page=contact">Liên hệ</a></li>
                         </ul>                        
                     </div>
                 </div>
