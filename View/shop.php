@@ -38,7 +38,7 @@
         </div>
     </div>
     
-<<<<<<< Updated upstream
+
 
     <div  style="margin:40px 0px 0px 60px">
         <input type="text" placeholder="Tên sách">
@@ -57,14 +57,9 @@
     ?>
     </select><br>
 
-=======
   
-    <div style="margin:40px 0px 0px 60px">
-      <input type="text" placeholder="Tên sách">
-      <input type="submit" value="Search">
-    </div>
-    
->>>>>>> Stashed changes
+ 
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">

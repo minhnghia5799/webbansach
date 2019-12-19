@@ -51,7 +51,7 @@ class UsersDao extends DBConnection
 
     public function updateUsers($Users)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE orders
                 SET 
                     pass='{$Users->getpass()}',

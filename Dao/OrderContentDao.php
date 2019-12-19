@@ -9,7 +9,7 @@ class OrderContentDao extends DBConnection
 		parent::__construct();
     }
     
-    public function getOrderContentByUserName($OrderId)
+    public function getOrderContentByUserName($UserName)
     {
         $result = $this->runQuery("SELECT *	FROM ordercontent WHERE userName = '{$UserName}'");
         $OrderContentList = array();
@@ -40,7 +40,7 @@ class OrderContentDao extends DBConnection
 
     public function updateOrderContent($OrderContent)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE ordercontent
                 SET 
                     productId='{$OrderContent->getProductId}',

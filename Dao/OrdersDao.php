@@ -41,7 +41,7 @@ class OrdersDao extends DBConnection
 
     public function updateOrders($UserName,$Status)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE orders
                 SET 
                     status='{$Status}'
