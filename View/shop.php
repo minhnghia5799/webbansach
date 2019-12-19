@@ -39,7 +39,7 @@
     </div>
     
   
-    <div class="box" style="margin:40px 0px 0px 60px">
+    <div  style="margin:40px 0px 0px 60px">
       <input type="text" placeholder="Tên sách">
       <input type="submit" value="Search">
     </div>

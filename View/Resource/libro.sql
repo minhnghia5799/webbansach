@@ -29,9 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `orders` (
-  `id` bigint(10) NOT NULL,
-  `userId` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `totalPrice` int(11) NOT NULL,
+  `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -42,7 +40,7 @@ CREATE TABLE `orders` (
 --
 
 CREATE TABLE `ordercontent` (
-  `orderId` bigint(10) NOT NULL,
+  `userName` varchar(255) NOT NULL,
   `productId` bigint(10) NOT NULL,
   `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -80,34 +78,33 @@ CREATE TABLE `productcategories` (
 --
 
 CREATE TABLE `shippinginfo` (
-  `orderId` bigint(10) NOT NULL,
-  `firstname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `county` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `province` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `streetAddress` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `postcode` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tel` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `id` bigint(10) NOT NULL,
+
+  `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+'status' varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL	
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
+
+CREATE TABLE `shippinginfocontent` (
+  `idShip` bigint(10) NOT NULL,
+
+  `productId` bigint(10), 
+'amount' int(11) 	
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 --
 -- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
-  `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pass` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `firstname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lastname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `county` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `province` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `streetAddress` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phoneNumber` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -119,14 +116,13 @@ CREATE TABLE `users` (
 -- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `orders_fk0` (`userId`);
-
+  ADD PRIMARY KEY (`userName`),
+  
 --
 -- Chỉ mục cho bảng `order_content`
 --
 ALTER TABLE `ordercontent`
-  ADD PRIMARY KEY (`orderId`,`productId`),
+  ADD PRIMARY KEY (`userName`,`productId`),
   ADD KEY `order_content_fk1` (`productId`);
 
 --
@@ -148,14 +144,18 @@ ALTER TABLE `productcategories`
 -- Chỉ mục cho bảng `shippinginfo`
 --
 ALTER TABLE `shippinginfo`
-  ADD PRIMARY KEY (`orderId`);
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `shippinginfocontent`
+  ADD PRIMARY KEY (`idShip`);
+
 
 --
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
+  ADD PRIMARY KEY (`userName`),
+  ADD UNIQUE KEY `userName` (`uesrName`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
@@ -165,10 +165,7 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
-ALTER TABLE `orders`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT;
-
---
+  --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
@@ -188,13 +185,13 @@ ALTER TABLE `productcategories`
 -- Các ràng buộc cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_fk0` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `orders_fk0` FOREIGN KEY (`userName`) REFERENCES `users` (`userName`);
 
 --
 -- Các ràng buộc cho bảng `order_content`
 --
 ALTER TABLE `ordercontent`
-  ADD CONSTRAINT `order_content_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`),
+  ADD CONSTRAINT `order_content_fk0` FOREIGN KEY (`userName`) REFERENCES `orders` (`userName`),
   ADD CONSTRAINT `order_content_fk1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`);
 
 --
@@ -207,8 +204,11 @@ ALTER TABLE `products`
 -- Các ràng buộc cho bảng `shipping_info`
 --
 ALTER TABLE `shippinginfo`
-  ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`);
+  ADD CONSTRAINT `shipping_info_fk0` FOREIGN KEY (`userName`) REFERENCES `users` (`userName`);
 COMMIT;
+
+ALTER TABLE `shippinginfocontent`
+  ADD CONSTRAINT `shipping_info_content_fk0` FOREIGN KEY (`idShip`) REFERENCES `shippinginfo` (`id`);
 
 ALTER TABLE `products` ADD `selledAmount` INT NOT NULL AFTER `imageLink`, ADD `ViewedAmount` BIGINT NOT NULL AFTER `selledAmount`;
 
