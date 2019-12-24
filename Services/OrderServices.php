@@ -72,6 +72,11 @@ class OrderServices
         $this->usersDao->insertUsers($Users);
     }
 
+    public function insertUsers2($un,$pw)
+    {
+        $this->usersDao->insertUsers2($un,$pw);
+    }
+
     public function updateUsers($Users)
     {
         $this->usersDao->updateUsers($Users);

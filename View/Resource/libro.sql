@@ -1,4 +1,11 @@
-﻿
+﻿-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 28, 2019 lúc 02:54 PM
+-- Phiên bản máy phục vụ: 10.4.6-MariaDB
+-- Phiên bản PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -6,6 +13,16 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `libro`
+--
+
+-- --------------------------------------------------------
 
 --
 -- Cấu trúc bảng cho bảng `orders`
@@ -64,7 +81,7 @@ CREATE TABLE `shippinginfo` (
   `id` bigint(10) NOT NULL,
 
   `userName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-`status` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL	
+status varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL	
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -73,7 +90,7 @@ CREATE TABLE `shippinginfocontent` (
   `idShip` bigint(10) NOT NULL,
 
   `productId` bigint(10), 
-`amount` int(11) 	
+amount int(11) 	
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
@@ -99,7 +116,7 @@ CREATE TABLE `users` (
 -- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`userName`);
+  ADD PRIMARY KEY (`userName`),
   
 --
 -- Chỉ mục cho bảng `order_content`
@@ -137,7 +154,9 @@ ALTER TABLE `shippinginfocontent`
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userName`);
+  ADD PRIMARY KEY (`userName`),
+  ADD UNIQUE KEY `userName` (`uesrName`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ

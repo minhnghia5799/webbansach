@@ -43,11 +43,9 @@
     <div  style="margin:40px 0px 0px 60px">
         <input type="text" placeholder="Tên sách">
         <input type="submit" value="Search">
-    </div>
-
-    
-
-    <select name='name'>
+    <div style="float: right">
+    <span style="color:#5a88ca;">Loại sách</span>   
+     <select name='name' style="height: 42px; margin-right:60px; color:#5a88ca">
     <?php  
         echo '<option value="Tất cả">Tất cả</option>';
         for ($i=0; $i < count($listCate); $i++)
@@ -56,7 +54,11 @@
         }
     ?>
     </select><br>
+    </div>
 
+    </div>
+
+    
   
  
 

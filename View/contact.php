@@ -35,21 +35,7 @@
             alert('Yêu cầu nhập email');
             return;
         }
-        $.post(
-            '?u=contact&act=feedback',
-            {
-                name:$('#contact-name').val(),
-                email:$('#contact-email').val(),
-                subject:$('#contact-subject').val(),
-                content:$('#contact-content').val(),
-            },
-            function(res) {
-                alert(res);
-                setTimeout(() => {
-                document.location = "?";  
-                }, 1000);
-            }
-            );
+        alert('Cảm ơn những đóng góp của bạn, chúc bạn một ngày nhiều niềm vui!!!');
         }
     </script>
   

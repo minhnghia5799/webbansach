@@ -34,7 +34,7 @@ class UsersDao extends DBConnection
     public function insertUsers($Users)
     {
         return $this->runQuery(
-            "INSERT INTO orders(userName,pass,email,name,province,address,phoneNumber)
+            "INSERT INTO users(userName,pass,email,name,province,address,phoneNumber)
             value (
                 
                 '{$Users->getUserName()}',
@@ -49,10 +49,26 @@ class UsersDao extends DBConnection
         );
     }
 
+    public function insertUsers2($un, $pw)
+    {
+        return $this->runQuery(
+            "INSERT INTO users(userName,pass,email,name,province,address,phoneNumber)
+            value (
+                '$un',
+                '$pw',
+                '',
+                '',
+                '',
+                '',
+                ''
+            )"
+        );
+    }
+
     public function updateUsers($Users)
     {
         return $this->runQuery(
-            "UPDATE orders
+            "UPDATE users
                 SET 
                     pass='{$Users->getpass()}',
                     email='{$Users->getEmail()},

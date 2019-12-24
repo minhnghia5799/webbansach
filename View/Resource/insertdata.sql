@@ -468,7 +468,7 @@ VALUES
 
 
 
-
+INSERT INTO `users`(`userName`, `pass`, `email`, `name`, `province`, `address`, `phoneNumber`) VALUES ('admin','admin','','','','','')
 
 
 
