@@ -36,7 +36,13 @@
         </div>
     </div>
     
-    
+    <?php 
+        require_once SITE_ROOT."/Dao/UsersDao.php";
+        $uDao = new UsersDao();
+        $user = $uDao->getUserByUserName($_SESSION['username']);
+    ?>
+
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -55,18 +61,18 @@
                                             <p id="billing_first_name_field" class="form-row form-row-first validate-required">
                                                 <label class="" for="billing_first_name">Họ tên <abbr title="required" class="required">*</abbr>
                                                 </label>
-                                                <input type="text" value="" placeholder="" id="billing_first_name" name="name" class="input-text ">
+                                                <input type="text" value="<?php echo $user->getName(); ?>" placeholder="" id="billing_first_name" name="name" class="input-text ">
                                             </p>
                                             <div class="clear"></div>
                                             <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
                                                 <label class="" for="billing_address_1">Địa chỉ <abbr title="required" class="required">*</abbr>
                                                 </label>
-                                                <input type="text" value=""  id="billing_address_1" name="address" class="input-text ">
+                                                <input type="text" value="<?php echo $user->getAddress(); ?>"  id="billing_address_1" name="address" class="input-text ">
                                             </p>
                                             <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
                                                 <label class="" for="billing_city">Tỉnh / Thành phố <abbr title="required" class="required">*</abbr>
                                                 </label>
-                                                <input type="text" value=""  id="billing_city" name="province" class="input-text ">
+                                                <input type="text" value="<?php echo $user->getProvince(); ?>"  id="billing_city" name="province" class="input-text ">
                                             </p>
 
                                             <div class="clear"></div>
@@ -74,13 +80,13 @@
                                             <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
                                                 <label class="" for="billing_email">Email <abbr title="required" class="required">*</abbr>
                                                 </label>
-                                                <input type="email" value=""  id="billing_email" name="email" class="input-text" style="width: 100%;">
+                                                <input type="email" value="<?php echo $user->getEmail(); ?>"  id="billing_email" name="email" class="input-text" style="width: 100%;">
                                             </p>
 
                                             <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
                                                 <label class="" for="billing_phone">Số điện thoại <abbr title="required" class="required">*</abbr>
                                                 </label>
-                                                <input type="number" value="" placeholder="" id="billing_phone" name="phoneNumber" class="input-text " style="width: 100%; padding: 10px;">
+                                                <input type="number" value="<?php echo $user->getPhoneNumber(); ?>" placeholder="" id="billing_phone" name="phoneNumber" class="input-text " style="width: 100%; padding: 10px;">
                                             </p>
                                             <div class="clear"></div>
 

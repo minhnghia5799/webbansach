@@ -34,7 +34,7 @@ class ShippingInfoDao extends DBConnection
             "INSERT INTO shippingInfo(id,userName,status)
             value (
                 
-                '{$ShippingInfo->getId()}',
+                {$ShippingInfo->getId()},
                 '{$ShippingInfo->getUserName()}',
                 '{$ShippingInfo->getStatus()}'
             )"
@@ -43,10 +43,10 @@ class ShippingInfoDao extends DBConnection
 
     public function updateShippingInfo($ShippingInfo)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE shippingInfo
                 SET 
-                    id='{$ShippingInfo->getId()}',
+                    id={$ShippingInfo->getId()},
                     status='{$ShippingInfo->getStatus()}'
                 WHERE userName='{$ShippingInfo->getUserName()}'"
         );
@@ -54,7 +54,7 @@ class ShippingInfoDao extends DBConnection
 
     public function deleteShippingInfo($UserName)
     {
-        $this->runQuery("DELETE FROM shippingInfo WHERE userName={$UserName}");
+        $this->runQuery("DELETE FROM shippingInfo WHERE userName='{$UserName}'");
     }
 
 }

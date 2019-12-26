@@ -34,21 +34,21 @@ class ShippingInfocontentDao extends DBConnection
             "INSERT INTO shippingInfocontent(idShip,productId,amount)
             value (
                 
-                '{$ShippingInfocontent->getIdShip()}',
-                '{$ShippingInfocontent->getProductId()}',
-                '{$ShippingInfocontent->getAmount()}'
+                {$ShippingInfocontent->getIdShip()},
+                {$ShippingInfocontent->getProductId()},
+                {$ShippingInfocontent->getAmount()}
             )"
         );
     }
 
     public function updateShippingInfocontent($ShippingInfocontent)
     {
-        return this->runQuery(
+        return $this->runQuery(
             "UPDATE shippingInfocontent
                 SET 
-                    ProductId='{$ShippingInfocontent->getProductId()}',
-                    amount='{$ShippingInfocontent->getAmount()}'
-                WHERE idShip='{$ShippingInfocontent->getIdShip()}'"
+                    ProductId={$ShippingInfocontent->getProductId()},
+                    amount={$ShippingInfocontent->getAmount()}
+                WHERE idShip={$ShippingInfocontent->getIdShip()}"
         );
     }
 

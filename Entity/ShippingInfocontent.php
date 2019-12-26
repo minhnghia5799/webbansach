@@ -1,5 +1,5 @@
 <?php
-class ShippingInfo
+class ShippingInfoContent
 {
     private $idShip;
     private $productId;

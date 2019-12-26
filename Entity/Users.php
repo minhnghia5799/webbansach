@@ -10,13 +10,14 @@ class Users
     private $phoneNumber;
    
 
-    public function __construct( $UserName,$Pass  ,$Name, $Province, $Address, $PhoneNumber)
+    public function __construct( $UserName, $Pass, $Email, $Name, $Province, $Address, $PhoneNumber)
     {
     $this->userName = $UserName;
     $this->pass = $Pass;
     $this->name = $Name;
     $this->province = $Province;
     $this->address = $Address;
+    $this->email = $Email;
     $this->phoneNumber = $PhoneNumber;
     }
 
@@ -38,6 +39,16 @@ class Users
     public function setPass($Pass)
     {
     $this->pass = $Pass;
+    }
+
+    public function getEmail()
+    {
+    return $this->email;
+    }
+
+    public function setEmail($Email)
+    {
+    $this->email = $Email;
     }
 
     public function getName()
