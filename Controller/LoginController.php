@@ -12,25 +12,16 @@
         {
             if ($list[$i]->getUserName() === $_POST['un']) 
             {
-<<<<<<< HEAD
                 $dem++;
                 require_once SITE_ROOT."/View/signup.php";
                 echo "<script> alert('Tài khoản này đã có người sử dụng'); </script>";
-=======
-            
-
->>>>>>> develop
             }
         }
         if($dem==0)
         {
-<<<<<<< HEAD
             $sSer->insertUsers2($_POST['un'],$_POST['pw']);
             $_SESSION['dk'] = "true";
             header("Location: ?page=home");
-=======
-            
->>>>>>> develop
         }
     } 
     else if ($_GET['page'] == 'login' && isset($_POST['username']) && isset($_POST['password'])) {
