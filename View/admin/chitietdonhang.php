@@ -60,25 +60,25 @@ The above copyright notice and this permission notice shall be included in all c
         <ul class="nav">
           
           <li class="active ">
-            <a href="./user.html">
+            <a href="./chitietdonhang.php">
               <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+              <p>Chi tiết đơn hàng</p>
             </a>
           </li>
           <li >
-            <a href="./quanlysach.html">
+            <a href="?page=admin&dashboard=quanlysach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý sách</p>
             </a>
           </li>
           <li >
-            <a href="./quanlyloaisach.html">
+            <a href="?page=admin&dashboard=quanlyloaisach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý loại sách</p>
             </a>
           </li>
           <li >
-            <a href="./quanlydonhang.html">
+            <a href="?page=admin&dashboard=quanlydonhang">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý đơn hàng</p>
             </a>

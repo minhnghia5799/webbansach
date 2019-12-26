@@ -31,10 +31,10 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
-  <link href="../Resource/assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../Resource/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <link href="View/Resource/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="View/Resource/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../Resource/assets/demo/demo.css" rel="stylesheet" />
+  <link href="View/Resource/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -59,26 +59,26 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="sidebar-wrapper">
         <ul class="nav">
         
-          <li>
-            <a href="./user.html">
+        <li >
+            <a href="./chitietdonhang.php">
               <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+              <p>Chi tiết đơn hàng</p>
             </a>
           </li>
           <li class="active ">
-            <a href="./quanlysach.html">
+            <a href="?page=admin&dashboard=quanlysach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý sách</p>
             </a>
           </li>
           <li >
-            <a href="./quanlyloaisach.html">
+            <a href="?page=admin&dashboard=quanlyloaisach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý loại sách</p>
             </a>
           </li>
           <li >
-            <a href="./quanlydonhang.html">
+            <a href="?page=admin&dashboard=quanlydonhang">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý đơn hàng</p>
             </a>
@@ -110,7 +110,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-                <input type="button" value="Thêm"  name="themsach">
+                <a href=""><input type="button" value="Thêm"  name="themsach"></a>  
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="nc-icon nc-zoom-split"></i>
@@ -166,20 +166,30 @@ The above copyright notice and this permission notice shall be included in all c
                         Chức năng
                       </th>
                     </thead>
+                    <tbody>
                     <?php
-                    require_once SITE_ROOT."/Dao/ProductDao.php";
-                    $list = new ProductDao;
-                    $list2 = $list1->getAllProducts();
-                    for($i=0; i<count($list2); i++)
+                    require_once SITE_ROOT."/Dao/ProductsDao.php";
+                    $list = new ProductsDao();
+                    $list2 = $list->getAllProducts();
+                    for($i=0; $i<Count($list2); $i++)
                     {
-                      ehco"<tr>
-                            <td>$list->getId();<td>
-                           <tr> 
-                      ";
+                      ?>
+                      <tr>
+                            <td><?php echo $list2[$i]->getId(); ?></td>
+                            <td><?php echo $list2[$i]->getName(); ?></td>
+                            <td><?php echo $list2[$i]->getCategory(); ?></td>
+                            <td><?php echo $list2[$i]->getPrice(); ?></td>
+                            <td><?php echo $list2[$i]->getSale(); ?></td>
+                            <td><?php echo $list2[$i]->getImageLink(); ?></td>
+                            <td><?php echo $list2[$i]->getSelledAmount(); ?></td>
+                            <td><?php echo $list2[$i]->getViewedAmount(); ?></td>
+                            <td><a href=""><input type="button" name="sua" value="sửa" > <input type="button" name="xoa" value="xóa"></a></td>
+                      <tr> 
+                      <?php
                     }
 
                     ?>
-                    
+                    <tbody>
                   </table>
                 </div>
               </div>
@@ -216,20 +226,20 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../Resource/assets/js/core/jquery.min.js"></script>
-  <script src="../Resource/assets/js/core/popper.min.js"></script>
-  <script src="../Resource/assets/js/core/bootstrap.min.js"></script>
-  <script src="../Resource/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="View/Resource/assets/js/core/jquery.min.js"></script>
+  <script src="View/Resource/assets/js/core/popper.min.js"></script>
+  <script src="View/Resource/assets/js/core/bootstrap.min.js"></script>
+  <script src="View/Resource/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
-  <script src="../Resource/assets/js/plugins/chartjs.min.js"></script>
+  <script src="View/Resource/assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="../Resource/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="View/Resource/assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../Resource/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <script src="View/Resource/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../Resource/assets/demo/demo.js"></script>
+  <script src="View/Resource/assets/demo/demo.js"></script>
 </body>
 
 </html>

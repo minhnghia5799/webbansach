@@ -20,8 +20,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="View/Resource/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="View/Resource/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Paper Dashboard 2 by Creative Tim
@@ -31,10 +31,10 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS Files -->
-  <link href="../Resource/assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="../Resource/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <link href="View/Resource/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="View/Resource/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../Resource/assets/demo/demo.css" rel="stylesheet" />
+  <link href="View/Resource/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -46,7 +46,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="../Resource/assets/img/logo-small.png">
+            <img src="View/Resource/assets/img/logo-small.png">
           </div>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
@@ -59,26 +59,26 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="sidebar-wrapper">
         <ul class="nav">
         
-          <li>
-            <a href="./user.html">
+        <li >
+            <a href="./chitietdonhang.php">
               <i class="nc-icon nc-single-02"></i>
-              <p>User Profile</p>
+              <p>Chi tiết đơn hàng</p>
             </a>
           </li>
           <li >
-            <a href="./quanlysach.html">
+            <a href="?page=admin&dashboard=quanlysach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý sách</p>
             </a>
           </li>
           <li >
-            <a href="./quanlyloaisach.html">
+            <a href="?page=admin&dashboard=quanlyloaisach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý loại sách</p>
             </a>
           </li>
-          <li class="active ">
-            <a href="./quanlydonhang.html">
+          <li class="active">
+            <a  href="?page=admin&dashboard=quanlydonhang">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý đơn hàng</p>
             </a>
@@ -165,20 +165,20 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../Resource/assets/js/core/jquery.min.js"></script>
-  <script src="../Resource/assets/js/core/popper.min.js"></script>
-  <script src="../Resource/assets/js/core/bootstrap.min.js"></script>
-  <script src="../Resource/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="View/Resource/assets/js/core/jquery.min.js"></script>
+  <script src="View/Resource/assets/js/core/popper.min.js"></script>
+  <script src="View/Resource/assets/js/core/bootstrap.min.js"></script>
+  <script src="View/Resource/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
-  <script src="../Resource/assets/js/plugins/chartjs.min.js"></script>
+  <script src="View/Resource/assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="../Resource/assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="View/Resource/assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../Resource/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <script src="View/Resource/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../Resource/assets/demo/demo.js"></script>
+  <script src="View/Resource/assets/demo/demo.js"></script>
 </body>
 
 </html>
