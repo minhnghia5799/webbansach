@@ -10,9 +10,25 @@ class UsersDao extends DBConnection
         parent::__construct();
     }
 
+    public function getUserByUserName($UserName)
+    {
+        $result = $this->runQuery(" SELECT * FROM users WHERE userName = '{$UserName}' ");
+        $row = $result->fetch_assoc();
+        return new Users(
+            $row['userName'],
+            $row['pass'],
+            $row['email'],
+            $row['name'],
+            $row['province'],
+            $row['address'],
+            $row['phoneNumber']
+        );
+
+    }
+
     public function getAllUsers()
     {
-        $result = $this->runQuery(" SELECT * from Users ");
+        $result = $this->runQuery(" SELECT * from users ");
         $UsersList = array();
         while ($row = $result->fetch_assoc())
         {
@@ -76,7 +92,7 @@ class UsersDao extends DBConnection
                     province='{$Users->getProvince()}',
                     address='{$Users->getAddress()}',
                     phoneNumber='{$Users->getPhoneNumber()}'
-                WHERE userName='{$Users->getUserName}'"
+                WHERE userName='{$Users->getUserName()}'"
         );
     }
 
