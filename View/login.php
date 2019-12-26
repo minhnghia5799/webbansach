@@ -24,13 +24,13 @@
 					</div>
 
 					<div class="text-right p-t-13 p-b-23">
-						<span class="txt1">
+						<!-- <span class="txt1">
 							Quên
 						</span>
 
 						<a href="?page=forgot" class="txt2">
 							mật khẩu?
-						</a>
+						</a> -->
 					</div>
 
 					<div class="container-login100-form-btn">

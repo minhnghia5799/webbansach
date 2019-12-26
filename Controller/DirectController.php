@@ -9,7 +9,15 @@
         else if ($_GET['page'] == 'contact') require_once SITE_ROOT.'/Controller/ContactController.php';
         else if ($_GET['page'] == 'home') require_once SITE_ROOT.'/Controller/ShopController.php';
         else if ($_GET['page'] == 'login' || $_GET['page'] == 'signup') require_once SITE_ROOT.'/Controller/LoginController.php';
-        else if ($_GET['page'] == 'checkout') require_once SITE_ROOT.'/View/checkout.php';
+        else if ($_GET['page'] == 'checkout') 
+        {
+            if (isset($_GET['finish']))
+            {
+
+            }
+            else require_once SITE_ROOT.'/View/checkout.php';
+        }
+        else if ($_GET['page'] == 'admin') require_once SITE_ROOT."/Controller/AdminController.php";
         else require_once SITE_ROOT.'/View/error.html';
     }
     else require_once SITE_ROOT.'/View/error.html';

@@ -20,7 +20,7 @@ class OrderContentDao extends DBConnection
                 $row['productId'],
                 $row['amount']
             );
-            array($OrderContentList,$OrderContent);
+            array_push($OrderContentList,$OrderContent);
         }
         $result->free();
         return $OrderContentList;
@@ -58,7 +58,7 @@ class OrderContentDao extends DBConnection
             WHERE userName='{$OrderContent->getUserName()}' AND productId={$OrderContent->getProductId()}"
         );
     }
-    public function deleteOrderContent($UserName)
+    public function deleteOrderContent($UserName, $ProductId)
     {
         $this->runQuery("DELETE FROM ordercontent WHERE userName='{$UserName}'");
     }

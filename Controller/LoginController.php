@@ -16,6 +16,12 @@
     else if (isset($_GET['logout'])) 
     {
         $oDao->updateOrders($_SESSION['username'], 0);
+        $list = $odDao->getOrderContentByUserName($_SESSION['username']);
+        for ($i = 0; $i < Count($list); $i++)
+        {
+            $list[$i]->setAmount(0);
+            $odDao->updateOrderContent($list[$i]);
+        } 
         unset($_SESSION['username']);
         header("Location: ?page=home");
     }

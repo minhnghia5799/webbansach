@@ -7,11 +7,27 @@
                     </div>
                 </div>
                 
-                <div class="col-sm-6" style="pointer-events: none; cursor: default;">
+                <?php 
+                    if (isset($_SESSION['username']))
+                    {
+                        require_once SITE_ROOT."/Dao/OrderContentDao.php";
+                        $ocDao = new OrderContentDao();
+                        $list = $ocDao->getOrderContentByUserName($_SESSION['username']);
+                        $num = 0;
+                        for ($i = 0; $i < Count($list); $i++)
+                        {
+                            if ($list[$i]->getAmount() != 0) $num++;
+                        } 
+                ?>
+                
+                <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="?page=cart">Giỏ hàng - <span class="cart-amunt">100.000<sup>VNĐ</sup></span> <i class="fa fa-shopping-cart"></i> <span class="product-count">0</span></a>
+                        <a href="?page=order">Giỏ hàng<i class="fa fa-shopping-cart"></i> <span class="product-count"><?php echo $num; ?></span></a>
                     </div>
                 </div>
+
+                    <?php } ?>
+
             </div>
         </div>
     </div> <!-- End site branding area -->
