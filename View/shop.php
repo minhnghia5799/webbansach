@@ -86,7 +86,7 @@
                             <ins><?php echo $listShop[$i]->getSale(); ?> VNĐ</ins> <del><?php echo $listShop[$i]->getPrice(); ?> VNĐ</del>
                         </div>                  
                         <div class="product-option-shop">
-                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="" style="pointer-events: none; cursor: default;" >Thêm vào giỏ hàng</a>
+                            <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="?page=order&update=<?php echo $listShop[$i]->getId(); ?>" >Thêm vào giỏ hàng</a>
                         </div>                       
                     </div>
                 </div>        

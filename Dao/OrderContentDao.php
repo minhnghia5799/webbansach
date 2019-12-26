@@ -15,7 +15,7 @@ class OrderContentDao extends DBConnection
         $OrderContentList = array();
         while ($row = $result->fetch_assoc())
         {
-            $OrderContent = new Ordercontent(
+            $OrderContent = new OrderContent(
                 $row['userName'],
                 $row['productId'],
                 $row['amount']
@@ -26,14 +26,25 @@ class OrderContentDao extends DBConnection
         return $OrderContentList;
     }
 
+    public function getOneOrderContent($UserName, $ProductId)
+    {
+        $result = $this->runQuery("SELECT *	FROM ordercontent WHERE userName = '{$UserName}' AND productId = {$ProductId}");
+        $row = $result->fetch_assoc();
+        return new Ordercontent(
+            $row['userName'],
+            $row['productId'],
+            $row['amount']
+        );
+    }
+
     public function insertOrderContent($OrderContent)
     {
         return $this->runQuery(
             "INSERT INTO ordercontent(userName,productId,amount)
             VALUE (
-                '{$OrderContent->getUserName}',
-                '{$OrderContent->getProductId}',
-                '{$OrderContent->getAmount}'
+                '{$OrderContent->getUserName()}',
+                {$OrderContent->getProductId()},
+                {$OrderContent->getAmount()}
                 )"
             );
     }
@@ -43,14 +54,13 @@ class OrderContentDao extends DBConnection
         return $this->runQuery(
             "UPDATE ordercontent
                 SET 
-                    productId='{$OrderContent->getProductId}',
-                    amount='{$OrderContent->getAmount}'
-                WHERE userName='{$OrderContent->getUserName}'"
+                    amount={$OrderContent->getAmount()}
+            WHERE userName='{$OrderContent->getUserName()}' AND productId={$OrderContent->getProductId()}"
         );
     }
     public function deleteOrderContent($UserName)
     {
-        $this->runQuery("DELETE FROM ordercontent WHERE userName={$UserName}");
+        $this->runQuery("DELETE FROM ordercontent WHERE userName='{$UserName}'");
     }
 }
 

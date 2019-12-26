@@ -13,6 +13,7 @@ class Users
     public function __construct( $UserName,$Pass  ,$Name, $Province, $Address, $PhoneNumber)
     {
     $this->userName = $UserName;
+    $this->pass = $Pass;
     $this->name = $Name;
     $this->province = $Province;
     $this->address = $Address;
@@ -36,7 +37,7 @@ class Users
 
     public function setPass($Pass)
     {
-    $this->userName = $Pass;
+    $this->pass = $Pass;
     }
 
     public function getName()

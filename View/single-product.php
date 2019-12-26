@@ -42,13 +42,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="single-sidebar">
+                    <!-- <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="">
                             <input type="text" placeholder="Search products...">
                             <input type="submit" value="Search" style="pointer-events: none; cursor: default;">
                         </form>
-                    </div>
+                    </div> -->
                     
                     <div class="single-sidebar" style="display:none;">
                         <h2 class="sidebar-title">Products</h2>
@@ -119,11 +119,11 @@
                                         <ins><?php echo $p->getSale(); ?>VND</ins> <del><?php echo $p->getPrice(); ?>VND</del>
                                     </div>    
                                     
-                                    <form action="" class="cart">
+                                    <form action="?page=order&add=<?php echo $_GET['id']; ?>" method="post" class="cart">
                                         <div class="quantity">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" max="100" step="1">
                                         </div>
-                                        <button class="add_to_cart_button" type="submit" style="pointer-events: none; cursor: default;">Add to cart</button>
+                                        <button class="add_to_cart_button" type="submit" >Thêm vào giỏ hàng</button>
                                     </form>   
                                     
                                     <div class="product-inner-category">

@@ -34,6 +34,14 @@
                 $_SESSION["dk"] = "false";
             }
         }
+        else if (isset($_SESSION['dn']))
+        {
+            if ($_SESSION["dn"] === "true") 
+            {
+                echo "<script> alert('Đăng nhập thành công'); </script>";
+                $_SESSION["dn"] = "false";
+            }
+        }
     ?>
     
     <div class="slider-area">
@@ -137,7 +145,7 @@
                                 <div class="product-f-image">
                                     <img src="<?php echo $list10[$i]->getImageLink(); ?>" alt="">
                                     <div class="product-hover">
-                                        <a href="" class="add-to-cart-link" style="pointer-events: none; cursor: default;"><i class="fa fa-shopping-cart" ></i> Thêm vào giỏ</a>
+                                        <a href="?page=order&update=<?php echo $list10[$i]->getId(); ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart" ></i> Thêm vào giỏ</a>
                                         <a href="?page=single-product&id=<?php echo $list10[$i]->getId(); ?>" class="view-details-link"><i class="fa fa-link"></i> Xem chi tiết</a>
                                     </div>
                                 </div>

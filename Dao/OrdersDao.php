@@ -12,7 +12,7 @@ class OrdersDao extends DBConnection
 
     public function getOrdersByUserName($UserName)
     {
-        $result = $this->runQuery(" SELECT * from orders where userName ='$UserName'");
+        $result = $this->runQuery(" SELECT * from orders where userName ='{$UserName}'");
         $OrdersList = array();
         while ($row = $result->fetch_assoc())
         {
@@ -34,7 +34,7 @@ class OrdersDao extends DBConnection
                 
                 '{$Orders->getUserName()}',
                 
-                '{$Orders->getStatus()}'
+                {$Orders->getStatus()}
             )"
         );
     }
@@ -44,14 +44,14 @@ class OrdersDao extends DBConnection
         return $this->runQuery(
             "UPDATE orders
                 SET 
-                    status='{$Status}'
+                    status={$Status}
                 WHERE userName='{$UserName}'"
         );
     }
 
     public function deleteOrders($UserName)
     {
-        $this->runQuery("DELETE FROM orders WHERE userName={$UserName}");
+        $this->runQuery("DELETE FROM orders WHERE userName='{$UserName}'");
     }
 
 }
