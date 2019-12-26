@@ -1,5 +1,6 @@
 <?php
 
+    $dk = false;
     if (isset($_GET['page']))
     {
         if ($_GET['page'] == 'shop') require_once SITE_ROOT.'/Controller/ShopController.php';

@@ -12,16 +12,27 @@
         {
             if ($list[$i]->getUserName() === $_POST['un']) 
             {
-            echo "Tai khoan da co ng dung";
-            $dem++;
+            
+
             }
         }
         if($dem==0)
         {
-            $sSer->insertUsers2($_POST['un'],$_POST['pw']);
-            echo "Dang ky thanh cong";
+            
         }
     } 
+    else if ($_GET['page'] == 'login' && isset($_POST['username']) && isset($_POST['password'])) {
+        $list = $sSer->getAllUsers();
+        for ($i=0; $i<count($list); $i++)
+        {
+            if ($list[$i]->getUserName() === $_POST['username'] && $list[$i]->getPass() === $_POST['pass']) 
+            {
+            header('Location:?page=home');
+            }
+
+        }
+        require_once SITE_ROOT."/View/login.php";
+    }
     else if ($_GET['page'] == 'login') require_once SITE_ROOT."/View/login.php";
     else require_once SITE_ROOT."/View/signup.php";
 
