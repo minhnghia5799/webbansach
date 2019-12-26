@@ -14,7 +14,10 @@
         $list3N = $pModel->get3ProductNew($sServices->getAllProducts());
         $list3V = $pModel->get3ProductViewed($sServices->getAllProducts());
         $list3S = $pModel->get3ProductSelled($sServices->getAllProducts());
+        
         require_once SITE_ROOT."/View/home.php";
+        if ($dk == true) echo "<script>alert('Đăng ký thành công chào mừng bạn đến với web sách Libro')</script>";
+        $dk = false;
     }
     else if (isset($_GET['num']))
     {
