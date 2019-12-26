@@ -24,6 +24,18 @@
         require_once SITE_ROOT."/View/Layout/navbar.php";
     ?>
     
+    <?php
+        //echo $_SESSION["dk"];
+        if (isset($_SESSION['dk']))
+        {
+            if ($_SESSION["dk"] === "true") 
+            {
+                echo "<script> alert('Đăng ký thành công'); </script>";
+                $_SESSION["dk"] = "false";
+            }
+        }
+    ?>
+    
     <div class="slider-area">
         	<!-- Slider -->
 			<div class="block-slider block-slider4">

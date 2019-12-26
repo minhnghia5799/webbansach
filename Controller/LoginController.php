@@ -12,14 +12,16 @@
         {
             if ($list[$i]->getUserName() === $_POST['un']) 
             {
-            echo "Tai khoan da co ng dung";
-            $dem++;
+                $dem++;
+                require_once SITE_ROOT."/View/signup.php";
+                echo "<script> alert('Tài khoản này đã có người sử dụng'); </script>";
             }
         }
         if($dem==0)
         {
             $sSer->insertUsers2($_POST['un'],$_POST['pw']);
-            echo "Dang ky thanh cong";
+            $_SESSION['dk'] = "true";
+            header("Location: ?page=home");
         }
     } 
     else if ($_GET['page'] == 'login') require_once SITE_ROOT."/View/login.php";
