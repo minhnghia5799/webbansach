@@ -116,7 +116,7 @@ CREATE TABLE `users` (
 -- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`userName`),
+  ADD PRIMARY KEY (`userName`);
   
 --
 -- Chỉ mục cho bảng `order_content`
@@ -155,7 +155,7 @@ ALTER TABLE `shippinginfocontent`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userName`),
-  ADD UNIQUE KEY `userName` (`uesrName`),
+  ADD UNIQUE KEY `userName` (`userName`),
   ADD UNIQUE KEY `email` (`email`);
 
 --

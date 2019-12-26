@@ -21,10 +21,10 @@ The above copyright notice and this permission notice shall be included in all c
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="View/Resource/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="View/Resource/assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="View/Resource/img/logotab.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Paper Dashboard 2 by Creative Tim
+    Admin Libro
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -46,11 +46,11 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           <div class="logo-image-small">
-            <img src="View/Resource/assets/img/logo-small.png">
+            <img src="View/Resource/img/logo.png">
           </div>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        LIBRO BOOKSTORE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->

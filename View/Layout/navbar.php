@@ -17,6 +17,7 @@
                         <li class="<?php if(isset($_GET['page']))if($_GET['page']=='single-product')echo 'active' ?>" style="pointer-events:; cursor: default; display: none"><a href="?page=single-product&sp=1">Sản phẩm</a></li>
                         <li class="<?php if(isset($_GET['page']))if($_GET['page']=='order')echo 'active' ?>" style="pointer-events:; cursor: default;"><a href="?page=order">Giỏ hàng</a></li>
                         <li class="<?php if(isset($_GET['page']))if($_GET['page']=='contact')echo 'active' ?>" style="pointer-events:; cursor: default;"><a href="?page=contact">Liên hệ</a></li>
+                        <li class="<?php if(isset($_GET['page']))if($_GET['page']=='quanlysach')echo 'active' ?>" style="pointer-events:; cursor: default;"><a href="?page=admin&dashboard=quanlysach">Quản lý</a></li>
                     </ul>
                 </div>  
             </div>
