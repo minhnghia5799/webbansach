@@ -58,7 +58,7 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          
+        
           <li>
             <a href="./user.html">
               <i class="nc-icon nc-single-02"></i>
@@ -66,11 +66,24 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="active ">
-            <a href="./tables.html">
+            <a href="./quanlysach.html">
               <i class="nc-icon nc-tile-56"></i>
-              <p>Table List</p>
+              <p>Quản lý sách</p>
             </a>
           </li>
+          <li >
+            <a href="./quanlyloaisach.html">
+              <i class="nc-icon nc-tile-56"></i>
+              <p>Quản lý loại sách</p>
+            </a>
+          </li>
+          <li >
+            <a href="./quanlydonhang.html">
+              <i class="nc-icon nc-tile-56"></i>
+              <p>Quản lý đơn hàng</p>
+            </a>
+          </li>
+         
           
         </ul>
       </div>
@@ -87,7 +100,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo"></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -97,7 +110,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
             <form>
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="button" value="Thêm"  name="themsach">
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <i class="nc-icon nc-zoom-split"></i>
@@ -105,37 +118,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link btn-magnify" href="#pablo">
-                  <i class="nc-icon nc-layout-11"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item btn-rotate dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="nc-icon nc-bell-55"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Some Actions</span>
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-rotate" href="#pablo">
-                  <i class="nc-icon nc-settings-gear-65"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block">Account</span>
-                  </p>
-                </a>
-              </li>
-            </ul>
+            
           </div>
         </div>
       </nav>
@@ -149,125 +132,54 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
+                <h4 class="card-title"> Danh sách</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
-                        Name
+                        Mã sách
                       </th>
                       <th>
-                        Country
+                        Tên sách
                       </th>
                       <th>
-                        City
+                        Loại sách
                       </th>
-                      <th class="text-right">
-                        Salary
+                      <th>
+                        Giá
+                      </th>
+                      <th>
+                        Giá khuyến mãi
+                      </th>
+                      <th>
+                        Ảnh sách
+                      </th>
+                      <th>
+                        Số lượng bán
+                      </th>
+                      <th>
+                        Lượt xem
+                      </th>
+                      <th>
+                        Chức năng
                       </th>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $98,615
-                        </td>
-                      </tr>
-                    </tbody>
+                    <?php
+                    require_once SITE_ROOT."/Dao/ProductDao.php";
+                    $list = new ProductDao;
+                    $list2 = $list1->getAllProducts();
+                    for($i=0; i<count($list2); i++)
+                    {
+                      ehco"<tr>
+                            <td>$list->getId();<td>
+                           <tr> 
+                      ";
+                    }
+
+                    ?>
+                    
                   </table>
                 </div>
               </div>
