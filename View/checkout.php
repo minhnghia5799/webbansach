@@ -102,7 +102,7 @@
 
                                         <div class="form-row place-order">
 
-                                            <input type="submit" data-value="Place order" value="Place order" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                                            <input type="submit" data-value="Place order" value="Thanh toán" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
 
 
                                         </div>

@@ -85,13 +85,8 @@ class UsersDao extends DBConnection
         return $this->runQuery(
             "UPDATE users
                 SET 
-<<<<<<< HEAD
                     pass='{$Users->getPass()}',
-                    email='{$Users->getEmail()},
-=======
-                    pass='{$Users->getpass()}',
                     email='{$Users->getEmail()}',
->>>>>>> develop
                     name='{$Users->getName()}',
                     province='{$Users->getProvince()}',
                     address='{$Users->getAddress()}',

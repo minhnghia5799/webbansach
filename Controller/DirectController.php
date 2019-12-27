@@ -52,6 +52,7 @@
                     $pDao->updateOrderContent($list[$i]);
                 }
 
+                echo "<script> alert('Đã thanh toán thành công!'); </script>";
                 header("Location: ?page=home");
             }
             else require_once SITE_ROOT.'/View/checkout.php';
