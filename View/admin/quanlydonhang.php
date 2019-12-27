@@ -126,7 +126,26 @@ The above copyright notice and this permission notice shall be included in all c
                         Chức năng
                       </th>
                     </thead>
-                   
+                   <tbody>
+                   <?php
+                      require_once SITE_ROOT."/Dao/ShippingInfoDao.php";
+                      require_once SITE_ROOT."/Dao/UsersDao.php";
+                      $list = new ShippingInfoDao();
+                      $list2 = new UsersDao();
+                      $list3 = $list->getAllShippingInfo();
+                      for($i=0; $i<Count($list3); $i++)
+                      {
+                        $us = $list2->getUserByUserName($list3[$i]->getUserName());
+                        ?>
+                        <tr>
+                          <td><?php echo $list3[$i]->getId(); ?></td>
+                          <td><?php echo $list3[$i]->getUserName(); ?></td>
+                          <td><?php echo $us->getName(); ?></td>
+                        </tr>
+                        <?php
+                      }
+                   ?>
+                   </tbody>
                   </table>
                 </div>
               </div>
