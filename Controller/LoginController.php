@@ -13,6 +13,7 @@
     $odDao = new OrderContentDao();
 
     if (!isset($_GET['page'])) require_once SITE_ROOT."/View/error.html";
+    // Đăng xuất
     else if (isset($_GET['logout'])) 
     {
         $oDao->updateOrders($_SESSION['username'], 0);
@@ -25,6 +26,7 @@
         unset($_SESSION['username']);
         header("Location: ?page=home");
     }
+    // Đăng ký
     else if (isset($_POST['un']) && isset($_POST['pw']) && isset($_POST['rpw']))
     {
         $dem = 0;
@@ -47,7 +49,8 @@
             }
             if($dem==0)
             {
-                $sSer->insertUsers2($_POST['un'],$_POST['pw']);
+                $passs = md5($_POST['pw'], false);
+                $sSer->insertUsers2($_POST['un'], $passs);
                 $oDao->insertOrders(new Orders($_POST['un'], 0));
                 $list = $shopSer->getAllProducts();
                 for ($i = 0; $i < Count($list); $i++)
@@ -60,11 +63,12 @@
         }
         
     } 
+    // Đăng nhập
     else if ($_GET['page'] == 'login' && isset($_POST['username']) && isset($_POST['password'])) {
         $list = $sSer->getAllUsers();
         for ($i=0; $i<count($list); $i++)
         {
-            if ($list[$i]->getUserName() === $_POST['username'] && $list[$i]->getPass() === $_POST['password']) 
+            if ($list[$i]->getUserName() === $_POST['username'] && $list[$i]->getPass() === md5($_POST['password'], false)) 
             {
                 $_SESSION['dn'] = "true";
                 $_SESSION['username'] = $_POST['username'];
