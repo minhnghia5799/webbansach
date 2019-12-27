@@ -53,10 +53,9 @@ class UsersDao extends DBConnection
             "INSERT INTO users(userName,pass,email,name,province,address,phoneNumber)
             value (
                 
-                '{$Users->getUserName()}',
-                
+                '{$Users->getUserName()}',  
                 '{$Users->getPass()}',
-                '{$Users->getEmail()},
+                '{$Users->getEmail()}',
                 '{$Users->getName()}',
                 '{$Users->getProvince()}',
                 '{$Users->getAddress()}',
@@ -86,8 +85,13 @@ class UsersDao extends DBConnection
         return $this->runQuery(
             "UPDATE users
                 SET 
+<<<<<<< HEAD
                     pass='{$Users->getPass()}',
                     email='{$Users->getEmail()},
+=======
+                    pass='{$Users->getpass()}',
+                    email='{$Users->getEmail()}',
+>>>>>>> develop
                     name='{$Users->getName()}',
                     province='{$Users->getProvince()}',
                     address='{$Users->getAddress()}',
@@ -98,7 +102,7 @@ class UsersDao extends DBConnection
 
     public function deleteUsers($UserName)
     {
-        $this->runQuery("DELETE FROM users WHERE userName={$UserName}");
+        $this->runQuery("DELETE FROM users WHERE userName='{$UserName}'");
     }
 
 }
