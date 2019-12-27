@@ -141,6 +141,9 @@ The above copyright notice and this permission notice shall be included in all c
                           <td><?php echo $list3[$i]->getId(); ?></td>
                           <td><?php echo $list3[$i]->getUserName(); ?></td>
                           <td><?php echo $us->getName(); ?></td>
+                          <td><?php echo $us->getAddress(); ?></td>
+                          <td><?php echo $us->getPhoneNumber(); ?></td>
+                          <td><a href=""><input type="button" name="xemchitiet" value="Xem chi tiết" > <input type="button" name="huydonhang" value="Hủy đơn hàng"></a> <a href=""><input type="button" name="thanhcong" value="Thành công"></a></td>
                         </tr>
                         <?php
                       }
