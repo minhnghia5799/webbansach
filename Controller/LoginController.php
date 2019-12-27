@@ -42,7 +42,7 @@
                 {
                     $dem++;
                     require_once SITE_ROOT."/View/signup.php";
-                    echo "<script> alert('Tài khoản này đã có người sử dụng'); </script>";
+                    echo "<script> alert('Tài khoản này đã có người sử dụng, vui lòng đăng ký một tài khoản khác'); </script>";
                 }
             }
             if($dem==0)

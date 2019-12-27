@@ -44,12 +44,12 @@ The above copyright notice and this permission notice shall be included in all c
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="?page=home" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="View/Resource/img/logo.png">
           </div>
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="?page=home" class="simple-text logo-normal">
         LIBRO BOOKSTORE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -71,8 +71,8 @@ The above copyright notice and this permission notice shall be included in all c
               <p>Quản lý sách</p>
             </a>
           </li>
-          <li >
-            <a class="active " href="?page=admin&dashboard=quanlyloaisach">
+          <li class="active ">
+            <a  href="?page=admin&dashboard=quanlyloaisach">
               <i class="nc-icon nc-tile-56"></i>
               <p>Quản lý loại sách</p>
             </a>

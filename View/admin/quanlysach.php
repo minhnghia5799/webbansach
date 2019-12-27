@@ -44,12 +44,12 @@ The above copyright notice and this permission notice shall be included in all c
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="?page=home" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="View/Resource/img/logo.png">
           </div>
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="?page=home" class="simple-text logo-normal">
           LIBRO BOOKSTORE
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
@@ -183,7 +183,8 @@ The above copyright notice and this permission notice shall be included in all c
                             <td><?php echo $list2[$i]->getImageLink(); ?></td>
                             <td><?php echo $list2[$i]->getSelledAmount(); ?></td>
                             <td><?php echo $list2[$i]->getViewedAmount(); ?></td>
-                            <td><a href=""><input type="button" name="sua" value="sửa" > <input type="button" name="xoa" value="xóa"></a></td>
+                            <td><a href=""><input type="button" name="sua" value="sửa" ></a> 
+                            <a href="?page=admin&dashboard=quanlysach&action=remove&id=<?php echo $list2[$i]->getId(); ?>"><input type="button" name="xoa" value="xóa"></a></td>
                       <tr> 
                       <?php
                     }
