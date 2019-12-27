@@ -36,6 +36,7 @@
             return;
         }
         alert('Cảm ơn những đóng góp của bạn, chúc bạn một ngày nhiều niềm vui!!!');
+        window.location="?page=home";
         }
     </script>
   
