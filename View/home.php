@@ -34,12 +34,20 @@
                 $_SESSION["dk"] = "false";
             }
         }
-        else if (isset($_SESSION['dn']))
+        if (isset($_SESSION['dn']))
         {
             if ($_SESSION["dn"] === "true") 
             {
                 echo "<script> alert('Đăng nhập thành công'); </script>";
                 $_SESSION["dn"] = "false";
+            }
+        }
+        if (isset($_SESSION['checkout']))
+        {
+            if ($_SESSION['checkout'] === "true")
+            {
+                echo "<script> alert('Thanh toán thành công'); </script>";
+                $_SESSION['checkout'] = "false";
             }
         }
     ?>
