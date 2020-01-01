@@ -24,7 +24,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="View/Resource/img/logotab.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Paper Dashboard 2 by Creative Tim
+    
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -98,7 +98,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo"></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -106,7 +106,7 @@ The above copyright notice and this permission notice shall be included in all c
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navigation">
-            <form>
+            <!-- <form>
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
                 <div class="input-group-append">
@@ -115,9 +115,9 @@ The above copyright notice and this permission notice shall be included in all c
                   </div>
                 </div>
               </div>
-            </form>
+            </form> -->
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link btn-magnify" href="#pablo">
                   <i class="nc-icon nc-layout-11"></i>
                   <p>
@@ -145,7 +145,7 @@ The above copyright notice and this permission notice shall be included in all c
                     <span class="d-lg-none d-md-block">Account</span>
                   </p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -157,9 +157,9 @@ The above copyright notice and this permission notice shall be included in all c
 </div> -->
       <div class="content">
         <div class="row">
-          <div class="col-md-4">
-            <div class="card card-user">
-              <div class="image">
+          <!-- <div class="col-md-4"> -->
+            <!-- <div class="card card-user"> -->
+              <!-- <div class="image">
                 <img src="../Resource/assets/img/damir-bosnjak.jpg" alt="...">
               </div>
               <div class="card-body">
@@ -202,10 +202,10 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
+              </div> -->
+            <!-- </div>
+            <div class="card"> -->
+              <!-- <div class="card-header">
                 <h4 class="card-title">Team Members</h4>
               </div>
               <div class="card-body">
@@ -268,92 +268,69 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-8">
+              </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <div class="col-md-12">
             <div class="card card-user">
               <div class="card-header">
-                <h5 class="card-title">Edit Profile</h5>
+                <h5 class="card-title">Chi tiết đơn hàng</h5>
               </div>
               <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-5 pr-1">
-                      <div class="form-group">
-                        <label>Company (disabled)</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
-                      </div>
-                    </div>
-                    <div class="col-md-3 px-1">
-                      <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Username" value="michael23">
-                      </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" placeholder="Email">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Company" value="Chet">
-                      </div>
-                    </div>
-                    <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" value="Faker">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Address</label>
-                        <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
-                      </div>
-                    </div>
-                  </div>
+                
+                <?php
+                  require_once SITE_ROOT."/Dao/ShippingInfocontentDao.php";
+                  require_once SITE_ROOT."/Dao/ProductsDao.php";
+                  $dao1= new ShippingInfocontentDao();
+                  $dao2= new ProductsDao();
+
+                  $list = $dao1->getShippingInfocontentByIdship($_GET['id']);
+                  $tong = 0;
+                  for ($i = 0; $i < Count($list); $i++)
+                  {
+                    $sp = $dao2->getProductById($list[$i]->getProductId());
+                  
+                    $tong = $tong + $list[$i]->getAmount() * $sp->getSale();
+                ?>
+                  
                   <div class="row">
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
-                        <label>City</label>
-                        <input type="text" class="form-control" placeholder="City" value="Melbourne">
+                        <label>Tên sản phẩm</label>
+                        <input type="text" class="form-control" placeholder="City" value="<?php echo $sp->getName(); ?>">
                       </div>
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" class="form-control" placeholder="Country" value="Australia">
+                        <label>Số lượng</label>
+                        <input type="number" class="form-control" placeholder="Country" value="<?php echo $list[$i]->getAmount(); ?>">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
+                        <label>Giá</label>
+                        <input type="number" class="form-control" placeholder="ZIP Code" value="<?php echo $list[$i]->getAmount() * $sp->getSale(); ?>">
                       </div>
                     </div>
                   </div>
+
+                  <?php } ?>
+
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>About Me</label>
-                        <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
+                        <label>Tổng giá</label>
+                        <textarea class="form-control textarea"><?php echo $tong; ?></textarea>
                       </div>
                     </div>
                   </div>
+
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
+                      <a href="?page=admin&dashboard=quanlydonhang"><button type="button" class="btn btn-primary btn-round">Back</button></a>
                     </div>
                   </div>
-                </form>
+                
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="sidebar-wrapper">
         <ul class="nav">
           
-        <li >
+        <li style="display:none">
             <a href="./chitietdonhang.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Chi tiết đơn hàng</p>

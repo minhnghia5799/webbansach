@@ -41,7 +41,14 @@
 
                 for ($i = 0; $i < Count($list); $i++)
                 {
-                    if ($list[$i]->getAmount() != 0) $sicDao->insertShippingInfocontent(new ShippingInfoContent($idShip, $list[$i]->getProductId(), $list[$i]->getAmount()));
+                    //echo $list[$i]->getAmount();
+                    if ($list[$i]->getAmount() != 0) 
+                    {
+                        $tmp = new ShippingInfoContent($idShip, $list[$i]->getProductId(), $list[$i]->getAmount());
+                        //echo $tmp->getProductId()." ".$tmp->getAmount()." ";
+                        $sicDao->insertShippingInfocontent($tmp);
+
+                    }
                 }
 
                 // Remove

@@ -30,6 +30,6 @@
         else require_once SITE_ROOT."/View/admin/quanlydonhang.php";
     }
     else if ($_GET['dashboard'] == 'quanlyloaisach') require_once SITE_ROOT."/View/admin/quanlyloaisach.php";
-    else if ($_GET['dashboard'] == 'chitietdonhang') require_once SITE_ROOT."/View/admin/user.php";
+    else if ($_GET['dashboard'] == 'chitietdonhang') require_once SITE_ROOT."/View/admin/chitietdonhang.php";
 
 ?>

@@ -10,35 +10,34 @@ class ShippingInfocontentDao extends DBConnection
         parent::__construct();
     }
 
-    /*public function getShippingInfocontentByUserIdAndStatus($UserId, $Status)
+    public function getShippingInfocontentByIdship($Id)
     {
-        $result = $this->runQuery(" SELECT * from ShippingInfocontent where userid ='$UserId' && status = '$Status' ");
+        $result = $this->runQuery(" SELECT * from ShippingInfocontent where idShip=$Id");
         $ShippingInfocontentList = array();
         while ($row = $result->fetch_assoc())
         {
             $ShippingInfocontent= new ShippingInfocontent(
-            $row['id'],
-            $row['userid'],
-            $row['totalPrice'],
-            $row['status']
+            $row['idShip'],
+            $row['productId'],
+            $row['amount']
             );
             array_push($ShippingInfocontentList, $ShippingInfocontent);
         }
         $result->free();
         return $ShippingInfocontentList;
-    }*/
+    }
 
     public function insertShippingInfocontent($ShippingInfocontent)
     {
         return $this->runQuery(
-            "INSERT INTO shippingInfocontent(idShip,productId,amount)
+            "INSERT INTO shippinginfocontent(idShip,productId,amount)
             value (
-                
                 {$ShippingInfocontent->getIdShip()},
                 {$ShippingInfocontent->getProductId()},
                 {$ShippingInfocontent->getAmount()}
             )"
         );
+        echo "ss";
     }
 
     public function updateShippingInfocontent($ShippingInfocontent)
